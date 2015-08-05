@@ -13,5 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+    $data = array(
+        'title' => 'Tgelf - Homepage');
 });
+
