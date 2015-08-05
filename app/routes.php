@@ -17,3 +17,8 @@ Route::get('/', function()
         'title' => 'Tgelf - Homepage');
 });
 
+Route::get('createuser','UserController@index');
+Route::post('createuser','UserController@createuser');
+Route::get('success',function(){
+	return "Success";
+});
