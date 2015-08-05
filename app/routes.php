@@ -11,9 +11,5 @@
 |
 */
 
-Route::get('/', function()
-{
-    $data = array(
-        'title' => 'Tgelf - Homepage');
-});
-
+Route::get('/signup', 'ProfileController@index');
+Route::post('/signup', 'ProfileController@checkval');
