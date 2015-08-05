@@ -11,10 +11,10 @@
 |
 */
 
-<<<<<<< HEAD
+
 Route::get('/signup', 'ProfileController@index');
 Route::post('/signup', 'ProfileController@checkval');
-=======
+
 Route::get('/', function()
 {
     $data = array(
@@ -26,4 +26,4 @@ Route::post('createuser','UserController@createuser');
 Route::get('success',function(){
 	return "Success";
 });
->>>>>>> origin/master
+
