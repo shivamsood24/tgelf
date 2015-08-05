@@ -11,5 +11,19 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/signup', 'ProfileController@index');
 Route::post('/signup', 'ProfileController@checkval');
+=======
+Route::get('/', function()
+{
+    $data = array(
+        'title' => 'Tgelf - Homepage');
+});
+
+Route::get('createuser','UserController@index');
+Route::post('createuser','UserController@createuser');
+Route::get('success',function(){
+	return "Success";
+});
+>>>>>>> origin/master
