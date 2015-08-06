@@ -32,6 +32,7 @@ background: #F9F9F9; padding: 0 10px;
 }
 #footer{
 	padding: 0.25% !important;
+	    background-color: #194759;
 }
 
 @media (min-width:1800px) {
