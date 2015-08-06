@@ -6,23 +6,19 @@
 <div class="row col-md-4 col-md-offset-4 ">
 
 {{ Form::open(array('url' => 'login','method' => 'post')) }}
-<?php 
-	echo Form::text('email', '', array('class' => 'form-control','placeholder' => 'USER NAME'));
-	echo "<br>";
-	echo Form::password('', array('class' => 'form-control','placeholder' => 'PASSWORD'));
-	echo "<br>";
-	echo Form::submit('Submit!', array('class' => 'btn btn-default login-btn'));
-	?>
+ 
+	{{Form::text('username', '', array('class' => 'form-control','placeholder' => 'USER NAME'))}}
+	<br>
+	<span>{{$errors->login->first('username')}}</span>
+	
+	{{ Form::password('password', array('class' => 'form-control','placeholder' => 'PASSWORD'))}}
+	<br>
+	<span>{{$errors->login->first('password')}}</span>
+	{{ Form::submit('SUBMIT', array('class' => 'btn btn-default login-btn'))}}
 	{{ Form::close() }}
 </div>
 <div class="row col-md-4 col-md-offset-4" style="margin-top: 5px;">
-	 @if ($errors->has())
-        <div class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-                {{ $error }}<br>        
-            @endforeach
-        </div>
-        @endif
+	
 </div>
 </div>
 @stop

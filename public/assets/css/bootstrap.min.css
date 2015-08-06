@@ -2203,9 +2203,9 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
     border-color: #ccc;
 }
 .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: #adadad;
+    color: #fff;
+    background-color: #194759;
+    border-color: #194759;
 }
 .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
     background-image: none;

@@ -39,7 +39,7 @@ class LoginController extends BaseController {
 		}
 		else
 		{
-			return Redirect::to('login')->withErrors($validator)->withInput();
+			return Redirect::to('login')->withErrors($validator,'login')->withInput();
 		}
 	}
 
