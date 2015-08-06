@@ -9,8 +9,9 @@ class UserController extends BaseController
 
 	public function index()
 	{
-
-		return View::make('pages.createuser');
+		$title = "TGelf - Register Page";
+		
+		return View::make('pages.register',array('title'=> $title));
 	}
 	public function createuser(){
 

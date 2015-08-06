@@ -9,7 +9,7 @@
         </div>
         @endif
 </div>
-<div class="container content">
+<div class="container regiter-container">
 <h1 style="text-align: center;text-decoration: line-through;"><span style="background-color:#fff;">Login</span></h1>
 <div class="row col-md-4 col-md-offset-4 ">
 
