@@ -137,6 +137,7 @@ body.will-toggle-announcement #announcement {
 	transition: transform .5s ease-out, background-color .5s ease-out;
     
     text-align: center;
+    background-color: #a83334;
 }
 	#header.solid-bg {
 	    background: rgba(52, 55, 65, .96);
