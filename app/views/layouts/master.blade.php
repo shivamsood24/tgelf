@@ -75,9 +75,9 @@
             </div>              
         </div>
 
-
+<div style="margin-top: 10%">
     @yield('content')
-    
+    </div>
 
    <footer id="footer">
                 <div class="content-wrapper">
