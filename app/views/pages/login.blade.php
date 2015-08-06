@@ -9,7 +9,7 @@
         </div>
         @endif
 </div>
-<div class="container">
+<div class="container" style="padding-top: 10%;">
 <h1 style="text-align: center;">Login</h1>
 <div class="row col-md-4 col-md-offset-4 ">
 

@@ -1173,7 +1173,7 @@ body.regions-map .regions-map-section header {
 
 #footer {
 	padding: 20px;
-	height: 40px;
+	/*height: 40px;*/
 }				
 	#footer .copyrights {
 		font-size: 12px;

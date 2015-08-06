@@ -24,16 +24,16 @@
 <body style="background-color: #F9F9F9;">
    <section id="header">
    <div class="row">
-   <div class="col-md-4">
+   <div class="col-md-4 ">
    
    </div>
-   <div class="col-md-4">
+   <div class="col-md-4 col-xs-6">
             <div class="content-wrapper">
                 <a href="#" ><img src="{{asset('uploads/logo.png')}}" style="width: 67%;padding: 4%;"></a>
                             
             </div>
             </div>
-            <div class="col-md-4"> 
+            <div class="col-md-4 col-xs-6"> 
             <a href="#"  id="nav-trigger" ><img src="{{asset('uploads/menuicon.png')}}" style="width: 8%;float: right;margin-right: 5%;"></a>
             <a href="#" ><img src="{{asset('uploads/map.png')}}" style="width:8%;float:right;"></a>
            

@@ -3854,6 +3854,7 @@ body.with-regions-map-overlay #regions-map-overlay {
     width: 100%;
     margin-top: -3%;
     padding: 1% !important;
+    bottom: 0;
 	
 }
 	#footer .copyrights {
