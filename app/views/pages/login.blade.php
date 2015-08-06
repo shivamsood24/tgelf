@@ -15,13 +15,13 @@
 
 {{ Form::open(array('url' => 'createuser','method' => 'post')) }}
 <?php 
-	echo Form::text('email', 'User Name', array('class' => 'form-control'));
+	echo Form::text('email', '', array('class' => 'form-control','placeholder' => 'USER NAME'));
 	echo "<br>";
-	echo Form::text('password', 'PASSWORD', array('class' => 'form-control'));
+	echo Form::text('password','', array('class' => 'form-control','placeholder' => 'PASSWORD'));
 	echo "<br>";
-	echo Form::text('confirmpassword', 'CONFIRM PASSWORD', array('class' => 'form-control'));
+	echo Form::text('confirmpassword', '', array('class' => 'form-control','placeholder' => 'CONFIRM PASSWORD'));
 	echo "<br>";
-	echo Form::text('uniquecode', 'VERIFICATION CODE', array('class' => 'form-control'));
+	echo Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'));
 	echo "<br>";
 	echo Form::submit('Submit!', array('class' => 'btn btn-default'));
 	?>
