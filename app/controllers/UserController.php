@@ -40,4 +40,16 @@ class UserController extends BaseController
 		}
 
 	}
+
+	public function index($username)
+	{
+		$title = "TGelf - User Profile Page";
+		$user = User::where('username',$username)->first();
+		$data = array(
+			'title' => $title,
+			'username' => $user
+			);
+		return View::make('pages.userprofile',$data);
+	}
+
 }

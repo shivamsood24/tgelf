@@ -18,7 +18,7 @@ Route::get('/', 'IndexController@index');
 Route::get('/login', 'LoginController@index');
 Route::post('/login','LoginController@login');
 Route::get('/register','UserController@index');
-Route::get('/userprofile/{username}','UserProfileController@index');
+Route::get('/userprofile/{username}','ProfileController@profile');
 
 Route::get('createuser','UserController@index');
 Route::post('createuser','UserController@createuser');
