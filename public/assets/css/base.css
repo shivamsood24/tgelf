@@ -3848,7 +3848,12 @@ body.with-regions-map-overlay #regions-map-overlay {
 
 #footer {
 	background: #343741;
-	text-align: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    margin-top: -3%;
+    padding: 1% !important;
+	
 }
 	#footer .copyrights {
 		display: block;
