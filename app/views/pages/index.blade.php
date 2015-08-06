@@ -1,39 +1,47 @@
 @extends('layouts.master')
 @section('content')
-<div id="content">
-	
-		<div id="static-content"><!-- nav-solid-bg-trigger -->
-	
-			<section class="heading default-heading">
-	
-				
-					<img src="uploads/backgrounds/fellows.jpg" class="heading-img" alt="Fellows" />
-				
-	
-				<div class="heading-content">
-					<header>
-						<h2 class="section-title">LEADERS FORM</h2>
-					</header>			
-					<div class="heading-text">
-						<p>Connect With the leaders of tomorrow</p>
-						<a href="#" title="Read more" class="button dark-blue toggle-hidden-content-trigger">Learn more </a>
-					</div>	
+<header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-				</div>
-			</section>
-			<div class="col-md-6" style="background-color: rgba(214, 129, 38, 0.91);color: #fff;">
-			<h1 style="color;text-align: right;">DISCOVER LEADERS</h1>
-			<p style="width: 50%;float: right;">Do you need dummy text for your web pages, design mock ups etc.? At lorem.biz you find the Lorem Ipsum dummy text that you need.</p>
-			
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 1</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
+        </div>
 
-			</div>
-			<div class="col-md-6" style="background-color: #d68126;color: #fff;" >
-			<h1 style="color">LATEST EVENTS</h1>
-			<p style="width: 50%;float: left;">Do you need dummy text for your web pages, design mock ups etc.? At lorem.biz you find the Lorem Ipsum dummy text that you need.</p>
-			
-			</div>
-		
-		</div><!-- .content-wrapper -->
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
 		@stop
 		
 	    			

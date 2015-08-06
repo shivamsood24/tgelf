@@ -11,7 +11,7 @@ class IndexController extends \BaseController {
 	{
 		//
 		$title = "TGelf - Homepage";
-		return View::make('pages.index',array('title',$title));
+		return View::make('pages.index',array('title'=> $title));
 
 	}
 

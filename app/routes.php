@@ -14,7 +14,7 @@
 
 Route::get('/signup', 'ProfileController@index');
 Route::post('/signup', 'ProfileController@checkval');
-Route::post('/', 'IndexController@index');
+Route::get('/', 'IndexController@index');
 
 
 Route::get('createuser','UserController@index');

@@ -7,8 +7,12 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     {{HTML::style('assets/css/all.css')}}
+    {{HTML::style('assets/css/bootstrap.css')}}
+    {{HTML::style('assets/css/full-slider.css')}}
     {{HTML::style('assets/css/bootstrap.min.css')}}
     {{ HTML::script('assets/js/plugins/jquery-1.11.2.min.js') }}
+    {{ HTML::script('assets/js/jquery.js') }}
+    {{ HTML::script('assets/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/plugins/jquery.easing.1.3.js') }}
     {{ HTML::script('assets/js/plugins/jquery.event.move.js') }}
     {{ HTML::script('assets/js/plugins/jquery.event.swipe.js') }}
@@ -89,6 +93,8 @@
                 </div>
             </footer>
         </div><!-- #content -->
+
+        
 
 </div>
 
