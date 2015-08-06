@@ -1,0 +1,22 @@
+.login-btn{
+	border: 2px solid #A83334;
+	text-align: center;
+	background-color: #A83334;
+	color: white;
+	height: 65px;
+	width: 100%;
+}
+
+@media (min-width: 1800px)
+{
+	.content{
+		padding-top: 8%;
+	}
+}
+
+@media (min-width: 1200px)
+{
+	.content{
+		padding-top: 4%;
+	}
+}

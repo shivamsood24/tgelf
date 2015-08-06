@@ -9,7 +9,7 @@
         </div>
         @endif
 </div>
-<div class="container" style="padding-top: 10%;">
+<div class="container content">
 <h1 style="text-align: center;">Login</h1>
 <div class="row col-md-4 col-md-offset-4 ">
 
@@ -23,7 +23,7 @@
 	echo "<br>";
 	echo Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'));
 	echo "<br>";
-	echo Form::submit('Submit!', array('class' => 'btn btn-default'));
+	echo Form::submit('Submit!', array('class' => 'btn btn-default login-btn'));
 	?>
 	{{ Form::close() }}
 </div>
