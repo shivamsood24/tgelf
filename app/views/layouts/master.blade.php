@@ -84,7 +84,7 @@
                 <div class="content-wrapper">
                     <div class="row">
                         <div class="content-wrapper col-md-4 col-md-offset-4">
-                <a href="#" ><img src="{{asset('uploads/logo.png')}}" style="width: 67%;padding: 4%;"></a>
+                <a href="#" ><img src="{{asset('uploads/logo-footer.png')}}"></a>
                             
             </div>
             <div class="content-wrapper col-md-4">
