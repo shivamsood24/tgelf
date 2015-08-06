@@ -87,11 +87,11 @@
                 <a href="#" ><img src="{{asset('uploads/logo-footer.png')}}"></a>
                             
             </div>
-            <div class="content-wrapper col-md-4">
-                <a href="index.html" title="Home">+91 124 4974 400</a>
-                <a href="index.html" title="Home">Home</a>
-                <a href="index.html" title="Home">Home</a>
-                <a href="index.html" title="Home">Home</a>
+            <div class="content-wrapper col-md-4" style="margin-top:1%">
+                <a href="#" class="footer-right" title="Home">+91 124 4974 400</a>
+                <a href="#" class="footer-right" title="Home">New Delhi, India</a>
+                <a href="#" class="footer-right" title="Home">contactus@tgelf.org</a>
+                
                             
             </div>
 
