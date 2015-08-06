@@ -23,15 +23,6 @@
 </head>
 <body>
    <section id="header">
-            
-            
-                <div id="announcement">
-                    <div class="content-wrapper">           
-                        <p>K50 Applications = Currently Open! <a href="http://www.f6s.com/k50/apply" target="_blank" title="Apply here">Apply here</a>. Kairos Global Summit Registration = Now Open for Invited Attendees. <a href="globalsummit/index.html" target="_blank" title="Register">Register here</a></p>
-                    </div>
-                </div>
-            
-
             <div class="content-wrapper">
                 <a href="#" ><img src="{{asset('uploads/logo.png')}}" style="float: left;"></a>
                 <a href="#" class="nav-icon" id="nav-trigger">Menu</a>              
