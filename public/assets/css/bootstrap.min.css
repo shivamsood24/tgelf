@@ -4855,8 +4855,8 @@ button.close {
 }
 .carousel-indicators li {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
@@ -4866,8 +4866,8 @@ button.close {
     border-radius: 10px;
 }
 .carousel-indicators .active {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     margin: 0;
     background-color: #a83334;
     border: 1px solid #a83334;

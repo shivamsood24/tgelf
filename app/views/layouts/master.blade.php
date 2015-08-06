@@ -83,14 +83,14 @@
    <footer id="footer">
                 <div class="content-wrapper">
                     <div class="row">
-                        <div class="content-wrapper col-md-4 col-md-offset-4">
+                        <div class="content-wrapper col-md-2 col-md-offset-5">
                 <a href="#" ><img src="{{asset('uploads/logo-footer.png')}}"></a>
                             
             </div>
-            <div class="content-wrapper col-md-4" style="margin-top:1%">
-                <a href="#" class="footer-right" title="Home">+91 124 4974 400</a>
-                <a href="#" class="footer-right" title="Home">New Delhi, India</a>
-                <a href="#" class="footer-right" title="Home">contactus@tgelf.org</a>
+            <div class="content-wrapper col-md-5" style="margin-top:1%">
+                <a href="#" class="footer-right" title="Home"><img src="{{asset('uploads/phone.png')}}" style="width: 5%;">+91 124 4974 400</a>
+                <a href="#" class="footer-right" title="Home"><img src="{{asset('uploads/location.png')}}" style="width: 5%;">New Delhi, India</a>
+                <a href="#" class="footer-right" title="Home"><img src="{{asset('uploads/mail.png')}}" style="width: 5%;">contactus@tgelf.org</a>
                 
                             
             </div>

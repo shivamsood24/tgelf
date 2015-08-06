@@ -14,8 +14,8 @@
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('{{asset('uploads/slider.png')}}');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                    <p></p>
+                    <h2>THE LEADERS FORUM</h2>
+                    <p>"Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has." </p>
                 </div>
             </div>
             <div class="item">
