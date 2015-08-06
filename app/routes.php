@@ -14,13 +14,8 @@
 
 Route::get('/signup', 'ProfileController@index');
 Route::post('/signup', 'ProfileController@checkval');
+Route::post('/', 'IndexController@index');
 
-Route::get('/', function()
-{
-    $data = array(
-        'title' => 'Tgelf - Homepage');
-    	return View::make('pages.index')->with($data);
-});
 
 Route::get('createuser','UserController@index');
 Route::post('createuser','UserController@createuser');
