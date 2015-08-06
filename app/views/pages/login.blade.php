@@ -10,7 +10,7 @@
         @endif
 </div>
 <div class="container content">
-<h1 style="text-align: center;">Login</h1>
+<h1 style="text-align: center;text-decoration: line-through;"><span style="background-color:#fff;">Login</span></h1>
 <div class="row col-md-4 col-md-offset-4 ">
 
 {{ Form::open(array('url' => 'createuser','method' => 'post')) }}
