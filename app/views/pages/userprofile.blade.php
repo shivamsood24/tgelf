@@ -8,7 +8,7 @@
 	
 </div>
 <div class="col-md-4">
-<h1>JOHN HARRISON</h1>
+<h1>{{$username->firstname}}</h1>
 <hr>
 Ford Foundation
 	

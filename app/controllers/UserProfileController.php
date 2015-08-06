@@ -7,10 +7,15 @@ class UserProfileController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($username)
 	{
 		$title = "TGelf - User Profile Page";
-		return View::make('pages.userprofile',array('title'=> $title));
+		$user = User::where('username',$username)->first();
+		$data = array(
+			'title' => $title,
+			'username' => $user
+			);
+		return View::make('pages.userprofile',$data);
 	}
 
 
