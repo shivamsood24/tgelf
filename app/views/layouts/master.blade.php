@@ -21,7 +21,7 @@
     
     
 </head>
-<body>
+<body style="background-color: #F9F9F9;">
    <section id="header">
    <div class="row">
    <div class="col-md-4">

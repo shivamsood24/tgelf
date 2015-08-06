@@ -10,8 +10,9 @@
         @endif
 </div>
 <div class="container">
-<div class="row col-md-4">
-<h1>Login</h1>
+<h1 style="text-align: center;">Login</h1>
+<div class="row col-md-4 col-md-offset-4 ">
+
 {{ Form::open(array('url' => 'createuser','method' => 'post')) }}
 <?php 
 	echo Form::text('email', 'User Name', array('class' => 'form-control'));
