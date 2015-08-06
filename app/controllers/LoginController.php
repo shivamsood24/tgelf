@@ -35,7 +35,11 @@ class LoginController extends BaseController {
 
 		if($validator->passes())
 		{
-			return Redirect::to('success');
+			if (Auth::attempt(array('email' => $email, 'password' => $password), true))
+		{
+		   return Redirect::to('success');
+		}
+			
 		}
 		else
 		{
