@@ -14,22 +14,24 @@
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('{{asset('uploads/slider.png')}}');"></div>
                 <div class="carousel-caption">
-                    <h2>THE LEADERS FORUM</h2>
-                    <p>"Never doubt that a small group of thoughtful,committed citizens can change the world; indeed, it's the only thing that ever has."</p>
+                    <h2 style="font-size: 62px;">THE LEADERS FORUM</h2>
+                    <p style="font-size: 23px;">"Never doubt that a small group of thoughtful,committed citizens can change the world; indeed, it's the only thing that ever has."</p>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('{{asset('uploads/slider2.png')}}');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                 <div class="carousel-caption">
+                    <h2>THE LEADERS FORUM</h2>
+                    <p>"Never doubt that a small group of thoughtful,committed citizens can change the world; indeed, it's the only thing that ever has."</p>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
+                 <div class="carousel-caption">
+                    <h2>THE LEADERS FORUM</h2>
+                    <p>"Never doubt that a small group of thoughtful,committed citizens can change the world; indeed, it's the only thing that ever has."</p>
                 </div>
             </div>
         </div>

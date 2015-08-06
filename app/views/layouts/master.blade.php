@@ -23,9 +23,21 @@
 </head>
 <body>
    <section id="header">
+   <div class="row">
+   <div class="col-md-5">
+   sddsdadasdas
+   </div>
+   <div class="col-md-4">
             <div class="content-wrapper">
-                <a href="#" ><img src="{{asset('uploads/logo.png')}}" style="float: left;"></a>
-                <a href="#" class="nav-icon" id="nav-trigger">Menu</a>              
+                <a href="#" ><img src="{{asset('uploads/logo.png')}}" style="float: left;width: 67%;padding: 4%;"></a>
+                            
+            </div>
+            </div>
+            <div class="col-md-3">
+            <a href="#" ><img src="{{asset('uploads/map.png')}}" style="width:11%"></a>
+            <a href="#"  id="nav-trigger" ><img src="{{asset('uploads/menuicon.png')}}" style="width:11%"></a>
+            
+            </div>
             </div>
         </section>
 
