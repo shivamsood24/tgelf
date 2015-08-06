@@ -10,7 +10,7 @@
         @endif
 </div>
 <div class="container">
-<div class="row col-md-4">
+<div class="row col-md-4 col-md-offset-4">
 <h1>Login</h1>
 {{ Form::open(array('url' => 'createuser','method' => 'post')) }}
 <?php 
