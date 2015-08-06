@@ -8,16 +8,41 @@
 }
 
 
-@media (min-width: 1800px)
-{
-	.content{
+
+#war-header{
+	position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;  
+    color: #A83334;
+}
+
+#war-header:before{
+	    border-top: 2px solid #dfdfdf;
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 15px; left: 0; right: 0; bottom: 0;
+    width: 95%;
+    z-index: -1;
+}
+
+#war-header-inner{
+background: #F9F9F9; padding: 0 10px;
+}
+#footer{
+	padding: 0.25% !important;
+}
+
+@media (min-width:1800px) {
+    .login-container{
+
+		padding-top: 8%;
+	}
+}
+@media (max-width:1400px ) {
+    .login-container{
 		padding-top: 8%;
 	}
 }
 
-@media (min-width: 1200px and max-width: 1400px;)
-{
-	.content{
-		padding-top: 4%;
-	}
-}
