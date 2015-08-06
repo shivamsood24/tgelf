@@ -35,15 +35,24 @@ class LoginController extends BaseController {
 
 		if($validator->passes())
 		{
-			if (Auth::attempt(array('email' => $email, 'password' => $password), true))
-		{
-		   return Redirect::to('success');
-		}
+			$email = Input::get('username');
+        	$password = Input::get('password');
+
+        	//var_dump(Input::all());
+        	var_dump(Auth::attempt(array('username' => $email, 'password' => $password), true));
+		// 	if (Auth::attempt(array('username' => $email, 'password' => $password), true))
+		// {
+		//    return Redirect::to('success');
+		// }
+		// else
+		// {
+		// 	return Redirect::to('login1')->withErrors($validator,'login')->withInput(Input::except('password'));
+		// }
 			
 		}
 		else
 		{
-			return Redirect::to('login')->withErrors($validator,'login')->withInput();
+			return Redirect::to('login')->withErrors($validator,'login')->withInput(Input::except('password'));
 		}
 	}
 
