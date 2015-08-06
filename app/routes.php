@@ -19,6 +19,7 @@ Route::get('/', function()
 {
     $data = array(
         'title' => 'Tgelf - Homepage');
+    	return View::make('pages.index')->with($data);
 });
 
 Route::get('createuser','UserController@index');

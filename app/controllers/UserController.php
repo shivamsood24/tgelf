@@ -20,10 +20,11 @@ class UserController extends BaseController
 			'confirmpassword' => Input::get('confirmpassword'),
 			'unique_code' => Input::get('uniquecode')
 		];
-
+		
 		$rules = [
-			'username' => 'required',
-			'password' => 'required'
+			'username' => 'required|alpha',
+			'password' => 'required|alpha_num|between:4,8|confirmed',
+            'confirmpassword' => 'required|alpha_num|between:4,8'
 		];
 
 		$validator = Validator::make(Input::all(), $rules);
