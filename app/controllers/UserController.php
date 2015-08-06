@@ -19,13 +19,14 @@ class UserController extends BaseController
 			'username' => Input::get('username'),
 			'password' => Input::get('password'),
 			'confirmpassword' => Input::get('confirmpassword'),
-			'unique_code' => Input::get('uniquecode')
+			'uniquecode' => Input::get('uniquecode')
 		];
 		
 		$rules = [
 			'username' => 'required|alpha',
 			'password' => 'required|alpha_num|between:4,8|confirmed',
-            'confirmpassword' => 'required|alpha_num|between:4,8'
+            'confirmpassword' => 'required|alpha_num|between:4,8',
+            'uniquecode' => 'required|alpha'
 		];
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -36,12 +37,12 @@ class UserController extends BaseController
 		}
 		else
 		{
-			return Redirect::to('createuser')->withErrors($validator)->withInput();
+			return Redirect::to('register')->withErrors($validator,'login')->withInput(Input::except('password','confirmpassword'));
 		}
 
 	}
 
-	public function index($username)
+	public function profile($username)
 	{
 		$title = "TGelf - User Profile Page";
 		$user = User::where('username',$username)->first();

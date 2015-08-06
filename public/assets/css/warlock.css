@@ -1,3 +1,8 @@
+body{
+	min-height: 500px;
+	margin-bottom: 100px;
+	clear: both;
+}
 .login-btn{
 	border: 2px solid #A83334;
 	text-align: center;
@@ -7,42 +12,45 @@
 	width: 100%;
 }
 
-
-
+.warlock-error{
+	color:#A83334;
+	text-align: center;
+	display: block;
+}
 #war-header{
 	position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    z-index: 1;  
-    color: #A83334;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 1;  
+	color: #A83334;
 }
 
 #war-header:before{
-	    border-top: 2px solid #194759;
-    content:"";
-    margin: 0 auto;
-    position: absolute;
-    top: 15px; left: 0; right: 0; bottom: 0;
-    width: 95%;
-    z-index: -1;
+	border-top: 2px solid #194759;
+	content:"";
+	margin: 0 auto;
+	position: absolute;
+	top: 15px; left: 0; right: 0; bottom: 0;
+	width: 95%;
+	z-index: -1;
 }
 
 #war-header-inner{
-background: #F9F9F9; padding: 0 10px;
+	background: #F9F9F9; padding: 0 10px;
 }
 #footer{
 	padding: 0.25% !important;
-	    background-color: #194759;
+	background-color: #194759;
 }
 
 @media (min-width:1800px) {
-    .login-container{
+	.login-container{
 
 		padding-top: 8%;
 	}
 }
 @media (max-width:1400px ) {
-    .login-container{
+	.login-container{
 		padding-top: 8%;
 	}
 }
