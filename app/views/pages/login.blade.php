@@ -1,16 +1,8 @@
 @extends('layouts.master')
 @section('content')
-<div class="row">
-	 @if ($errors->has())
-        <div class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-                {{ $error }}<br>        
-            @endforeach
-        </div>
-        @endif
-</div>
-<div class="container content">
-<h1 style="text-align: center;text-decoration: line-through;"><span style="background-color:#fff;">Login</span></h1>
+
+<div class="container login-container">
+<h1 id="war-header" style="text-align: center;"><span id="war-header-inner" >Login</span></h1>
 <div class="row col-md-4 col-md-offset-4 ">
 
 {{ Form::open(array('url' => 'login','method' => 'post')) }}
@@ -22,6 +14,15 @@
 	echo Form::submit('Submit!', array('class' => 'btn btn-default login-btn'));
 	?>
 	{{ Form::close() }}
+</div>
+<div class="row col-md-4 col-md-offset-4" style="margin-top: 5px;">
+	 @if ($errors->has())
+        <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                {{ $error }}<br>        
+            @endforeach
+        </div>
+        @endif
 </div>
 </div>
 @stop
