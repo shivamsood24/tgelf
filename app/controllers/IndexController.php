@@ -10,7 +10,11 @@ class IndexController extends \BaseController {
 	public function index()
 	{
 		//
+		$title = "TGelf - Homepage";
+		return View::make('pages.index',array('title',$title));
+
 	}
+
 
 
 	/**
