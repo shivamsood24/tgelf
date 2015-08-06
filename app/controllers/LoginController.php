@@ -1,20 +1,17 @@
 <?php
 
-class IndexController extends BaseController {
+class LoginController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function login()
 	{
-		//
-		$title = "TGelf - Homepage";
-		return View::make('pages.index',array('title'=> $title));
-
+		$title = "TGelf - Login Page";
+		return View::make('pages.login',array('title'=> $title));
 	}
-
 
 
 	/**

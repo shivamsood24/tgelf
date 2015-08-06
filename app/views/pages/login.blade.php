@@ -9,23 +9,22 @@
         </div>
         @endif
 </div>
-<div class="row">
+<div class="container">
+<div class="row col-md-4">
+<h1>Login</h1>
 {{ Form::open(array('url' => 'createuser','method' => 'post')) }}
 <?php 
-	echo Form::label('usernamelabel', 'Username');
-	echo Form::text('username');
+	echo Form::text('email', 'User Name', array('class' => 'form-control'));
 	echo "<br>";
-	echo Form::label('pass', 'Password');
-	echo Form::text('password');
+	echo Form::text('password', 'PASSWORD', array('class' => 'form-control'));
 	echo "<br>";
-	echo Form::label('confirmpass','Confirm Password');
-	echo Form::text('confirmpassword');
+	echo Form::text('confirmpassword', 'CONFIRM PASSWORD', array('class' => 'form-control'));
 	echo "<br>";
-	echo Form::label('codelabel', 'Enter the Unique Code');
-	echo Form::text('uniquecode');
+	echo Form::text('uniquecode', 'VERIFICATION CODE', array('class' => 'form-control'));
 	echo "<br>";
-	echo Form::submit('Submit!');
+	echo Form::submit('Submit!', array('class' => 'btn btn-default'));
 	?>
 	{{ Form::close() }}
+</div>
 </div>
 @stop
