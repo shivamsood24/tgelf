@@ -12,21 +12,22 @@
         <div class="carousel-inner">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="fill" style="background-image:url('{{asset('uploads/slider.png')}}');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 1</h2>
+                    <p></p>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="fill" style="background-image:url('{{asset('uploads/slider2.png')}}');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 2</h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="fill" style="background-image:url('{{asset('uploads/slider.png')}}');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>

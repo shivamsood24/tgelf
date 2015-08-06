@@ -82,18 +82,19 @@
 
    <footer id="footer">
                 <div class="content-wrapper">
-                    <a href="index.html" class="logo" title="The Kairos Society">The Kairos Society</a>
-                    
-                    <div class="copyrights">
-                        <a href="https://www.facebook.com/TheKairosSociety" target="_blank" title="Facebook" class="fb-link">Facebook</a>
-                        <a href="https://twitter.com/KairosSociety" target="_blank" title="Twitter" class="tw-link">Twitter</a>
-                        <a href="https://angel.co/the-kairos-society" target="_blank" title="AngelList" class="al-link">AngelList</a>
-                    </div>
-                    <div class="social-links">
-                        <div>&copy; 2015 The Kairos Society. All rights reserved.</div>
+                    <div class="row">
+                        <div class="content-wrapper col-md-4 col-md-offset-4">
+                <a href="#" ><img src="{{asset('uploads/logo.png')}}" style="width: 67%;padding: 4%;"></a>
+                            
+            </div>
+            <div class="content-wrapper col-md-4">
+                <a href="index.html" title="Home">+91 124 4974 400</a>
+                <a href="index.html" title="Home">Home</a>
+                <a href="index.html" title="Home">Home</a>
+                <a href="index.html" title="Home">Home</a>
+                            
+            </div>
 
-                        <a href="ajax/terms.html" title="Terms of Use" class="popup-trigger">Terms of Use</a>
-                        <a href="ajax/privacy.html" title="Privacy Policy" class="popup-trigger">Privacy Policy</a>                     
                     </div>
                 </div>
             </footer>
