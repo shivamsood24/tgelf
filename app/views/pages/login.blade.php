@@ -17,9 +17,9 @@
 <?php 
 	echo Form::text('email', '', array('class' => 'form-control','placeholder' => 'USER NAME'));
 	echo "<br>";
-	echo Form::text('password','', array('class' => 'form-control','placeholder' => 'PASSWORD'));
+	echo Form::password('', array('class' => 'form-control','placeholder' => 'PASSWORD'));
 	echo "<br>";
-	echo Form::text('confirmpassword', '', array('class' => 'form-control','placeholder' => 'CONFIRM PASSWORD'));
+	echo Form::password('', array('class' => 'form-control','placeholder' => 'CONFIRM PASSWORD'));
 	echo "<br>";
 	echo Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'));
 	echo "<br>";
