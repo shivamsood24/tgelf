@@ -35,11 +35,17 @@ class LoginController extends BaseController {
 
 		if($validator->passes())
 		{
-			if (Auth::attempt(array('email' => $email, 'password' => $password), true))
+			$username = Input::get('username');
+			$pass = Input::get('password');
+            
+			if (Auth::attempt(array('username' => $username, 'password' => $pass), true))
 		{
 		   return Redirect::to('success');
 		}
-			
+			else
+			{
+				return Redirect::to('success1');
+			}
 		}
 		else
 		{
