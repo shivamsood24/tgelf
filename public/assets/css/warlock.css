@@ -107,10 +107,17 @@
 
 		padding-top: 8%;
 	}
+	#war-header{
+		margin-bottom: 10%;
+	}
 }
 @media (max-width:1450px ) {
 	.login-container{
 		padding-top: 6%;
+	}
+
+	#war-header{
+		margin-bottom: 8%;
 	}
 }
 
