@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container login-container">
-<h1 id="war-header" style="text-align: center;"><span id="war-header-inner" >REGISTER</span></h1>
+<h1 id="" style="text-align: center;margin-bottom: 30px"><span id="war-header-inner" style="color:#A83334">REGISTER</span></h1>
 
 
 {{ Form::open(array('url' => 'createuser','method' => 'post','autocomplete' => 'off','id' => 'registerform')) }}
