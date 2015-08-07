@@ -32,7 +32,7 @@
    </div>
    <div class="col-md-4 col-xs-6">
             <div class="content-wrapper">
-                <a href="#" ><img src="{{asset('uploads/logo.png')}}" style="width: 67%;padding: 4%;"></a>
+                <a href="/" ><img src="{{asset('uploads/logo.png')}}" style="width: 67%;padding: 4%;"></a>
                             
             </div>
             </div>
