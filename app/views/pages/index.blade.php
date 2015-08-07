@@ -17,6 +17,7 @@
                     <h2 class="sliderheader">THE LEADERS FORUM</h2>
                     <p class="sliderheaderp">"Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has." </p>
                     <p class="mig">-Margaret Mead-</p>
+                    <br>
                     <a href="#" title="Read more" class="button">Read more</a>
                 </div>
             </div>
@@ -26,6 +27,8 @@
                <div class="carousel-caption">
                     <h2 class="sliderheader">THE LEADERS FORUM</h2>
                     <p class="sliderheaderp">"Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has." </p>
+                    <p class="mig">-Margaret Mead-</p>
+                    <br>
                     <a href="# " title="Read more" class="button">Read more</a>
                 </div>
             </div>
@@ -35,6 +38,8 @@
                 <div class="carousel-caption">
                     <h2 class="sliderheader">THE LEADERS FORUM</h2>
                     <p class="sliderheaderp">"Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has." </p>
+                    <p class="mig">-Margaret Mead-</p>
+                    <br>
                     <a href="#" title="Read more" class="button">Read more</a>
                 </div>
             </div>
