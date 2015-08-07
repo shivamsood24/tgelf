@@ -3960,6 +3960,8 @@ body.with-regions-map-overlay #regions-map-overlay {
 	-ms-transition: color .3s,  border-color .3s;
 	-o-transition: color .3s,  border-color .3s;
 	transition: color .3s,  border-color .3s;
+	border: 2px #fff solid;
+    color: #fff;
 }
 
 .button.dark-blue {

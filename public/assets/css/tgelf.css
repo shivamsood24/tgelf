@@ -1,8 +1,11 @@
 
 .footer-right
 {
-	    padding: 2%;
+	   padding: 0.5%;
     color: #fff;
+    font-family: 'Montserrat Light', sans-serif;
+    font-size: 18px;
+        text-shadow: none;
 }
 
 #circle {
@@ -17,6 +20,7 @@
 .sliderheader
 {
  font-size: 62px;
+ text-shadow: none;
 
 }
 .sliderheaderp
@@ -25,5 +29,12 @@
     margin-left: 10%;
     margin-right: 10%;
       font-family: 'Montserrat Light', arial;
+          text-shadow: none;
  
+}
+.mig
+{
+	font-size: 20px;
+	font-family: 'Montserrat Regular', sans-serif;
+	    font-style: italic;
 }
