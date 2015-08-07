@@ -4843,7 +4843,7 @@ button.close {
 .carousel-control .icon-next:before {
     content: '\203a'}
 .carousel-indicators {
-    position: absolute;
+    position: inherit;
     bottom: 10px;
     left: 50%;
     z-index: 15;
