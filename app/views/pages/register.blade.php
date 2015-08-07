@@ -20,7 +20,7 @@
 	{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
 	<br>
 	<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
-	{{ Form::button('GET STARTED', array('class' => 'btn btn-default login-btn next','data-val'=> '1'))}}
+	{{ Form::submit('GET STARTED', array('class' => 'btn btn-default login-btn next','data-val'=> '1'))}}
 	</fieldset>
 	{{ Form::close() }}
 </div>
