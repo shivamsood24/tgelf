@@ -12,3 +12,17 @@
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 100px;
+}
+
+.sliderheader
+{
+ font-size: 62px;
+
+}
+.sliderheaderp
+{
+ font-size: 18px;
+    margin-left: 10%;
+    margin-right: 10%;
+ 
+}
