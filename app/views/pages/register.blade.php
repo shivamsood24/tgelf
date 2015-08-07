@@ -34,5 +34,6 @@
 	
 </div>
 </div>
-{{ HTML::script('assets/js/script.js') }}@stop
+{{ HTML::script('assets/js/script.js') }}
+@stop
 

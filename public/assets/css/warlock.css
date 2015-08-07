@@ -67,7 +67,24 @@
 	color: white;
 }
 
+.warlock-inline{
+	display: flex;
+}
 
+.warlock-left{
+	margin-right: 3px;
+}
+
+.warlock-right{
+	margin-left: 3px;
+}
+
+.warlock-inline-head{
+	text-align: left;
+	color: #A83334;
+	border-bottom: 2px solid #A83334;
+    margin-bottom: 10px;
+}
 #progressbar li.active{
 	color: #A83334;
 }
