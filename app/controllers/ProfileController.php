@@ -71,6 +71,7 @@ public function profile($username)
     public function temp()
     {
         $title = "Temp";
-        return View::make('temp',$title);
+        $data = array('title' => $title );
+        return View::make('pages.temp',$data);
     }
 }
