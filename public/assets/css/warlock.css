@@ -120,4 +120,13 @@
 		margin-bottom: 8%;
 	}
 }
+@media (max-width:900px ) {
+	.login-container{
+		padding-top: 16%;
+	}
+
+	#war-header{
+		margin-bottom: 8%;
+	}
+}
 
