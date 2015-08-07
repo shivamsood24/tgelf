@@ -30,11 +30,11 @@
 				</div>
 				<div class="col-md-5">
 				<h3 style="text-align: center">BIO</h3>
-				<hr>
+				
 				<p style="text-align:center" class="profilep">Lorem ipsum” dummy text is used by many web-developers to test how their HTML templates will look with real data. Often</p>
 					
 				</div>
-				<p>/</p>
+				
 				<div class="col-md-3">
 					<p class="profilep">"Lorem ipsum” dummy text is used by many web-developers to test."</p>
 					<div style="margin-top: 10%;">
