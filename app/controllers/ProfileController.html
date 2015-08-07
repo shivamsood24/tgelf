@@ -65,4 +65,12 @@ public function profile($username)
             );
         return View::make('pages.userprofile',$data);
     }
+
+    //temp 
+
+    public function temp()
+    {
+        $title = "Temp";
+        return View::make('temp',$title);
+    }
 }
