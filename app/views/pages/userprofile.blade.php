@@ -28,11 +28,12 @@
                 <a href="#" class="soclicon">Technology</a>
                 <a href="#" class="soclicon">Research</a>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-5" style="border-right: 1px #A83334 solid;border-left: 1px #A83334 solid;">
+				
 				<h3 style="text-align: center">BIO</h3>
 				
 				<p style="text-align:center" class="profilep">Lorem ipsum” dummy text is used by many web-developers to test how their HTML templates will look with real data. Often</p>
-					
+				
 				</div>
 				
 				<div class="col-md-3">
