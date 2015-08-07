@@ -42,7 +42,7 @@ class LoginController extends BaseController {
         	// ($credentials));
 			if (Auth::attempt($credentials))
 		{
-		   return Redirect::to('userprofile/'.$username);
+		   return Redirect::to('profile/'.$username);
 		}
 		else
 		{
