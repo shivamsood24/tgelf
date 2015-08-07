@@ -1140,6 +1140,7 @@ pre code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 10%;
 }
 @media (min-width:768px) {
     .container {
@@ -4855,8 +4856,8 @@ button.close {
 }
 .carousel-indicators li {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
@@ -4866,8 +4867,8 @@ button.close {
     border-radius: 10px;
 }
 .carousel-indicators .active {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     margin: 0;
     background-color: #a83334;
     border: 1px solid #a83334;
@@ -4905,7 +4906,7 @@ button.close {
     left: 20%;
     padding-bottom: 13%}
 .carousel-indicators {
-    bottom: 93px;
+    bottom: 56%;
     top: 100px;
 }
 }

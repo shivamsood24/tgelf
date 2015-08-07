@@ -11,6 +11,8 @@
     {{HTML::style('assets/css/full-slider.css')}}
     {{HTML::style('assets/css/bootstrap.min.css')}}
     {{HTML::style('assets/css/warlock.css')}}
+    {{HTML::style('assets/css/font-awesome.css')}}
+    {{HTML::style('assets/css/font-awesome.min.css')}}
     {{ HTML::script('assets/js/plugins/jquery-1.11.2.min.js') }}
     {{ HTML::script('assets/js/jquery.js') }}
     {{ HTML::script('assets/js/bootstrap.min.js') }}

@@ -3953,14 +3953,14 @@ body.with-regions-map-overlay #regions-map-overlay {
 	border-width: 2px;
 	border-style: solid;
 	text-transform: uppercase;
-	font-family: "Polaris-Heavy";
+	font-weight: bold;
 
 	-webkit-transition: color .3s,  border-color .3s;
 	-moz-transition: color .3s,  border-color .3s;
 	-ms-transition: color .3s,  border-color .3s;
 	-o-transition: color .3s,  border-color .3s;
 	transition: color .3s,  border-color .3s;
-	border: 2px #fff solid;
+	border: 4px #fff solid;
     color: #fff;
 }
 
