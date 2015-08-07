@@ -32,6 +32,7 @@ Ford Foundation
 <p style="text-align:center">Lorem ipsum” dummy text is used by many web-developers to test how their HTML templates will look with real data. Often</p>
 	
 </div>
+<p>/</p>
 <div class="col-md-4">
 	<h1>JOHN HARRISON</h1>
 <hr>
