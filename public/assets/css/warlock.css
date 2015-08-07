@@ -22,10 +22,11 @@
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
+	text-align: -webkit-center;
 }
 #progressbar li {
 	list-style-type: none;
-	color: white;
+	color: #194759;
 	text-transform: uppercase;
 	font-size: 9px;
 	width: 33.33%;
@@ -39,9 +40,9 @@
 	line-height: 20px;
 	display: block;
 	font-size: 10px;
-	color: #333;
-	background: red;
-	border-radius: 3px;
+	color: #fff;
+	background: #194759;
+	border-radius: 20px;
 	margin: 0 auto 5px auto;
 }
 /*progressbar connectors*/
@@ -49,7 +50,7 @@
 	content: '';
 	width: 100%;
 	height: 2px;
-	background: red;
+	background: #194759;
 	position: absolute;
 	left: -50%;
 	top: 9px;
@@ -62,8 +63,13 @@
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: #A83334;
 	color: white;
+}
+
+
+#progressbar li.active{
+	color: #A83334;
 }
 .warlock-error{
 	color:#A83334;
@@ -104,7 +110,7 @@
 }
 @media (max-width:1400px ) {
 	.login-container{
-		padding-top: 8%;
+		padding-top: 4%;
 	}
 }
 
