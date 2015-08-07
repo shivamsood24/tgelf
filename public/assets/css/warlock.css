@@ -11,7 +11,9 @@
 	height: 65px;
 	width: 100%;
 }
-
+.last-btn{
+	margin-bottom: 5%;
+}
 .warlock-error{
 	color:#A83334;
 	text-align: center;
