@@ -44,10 +44,15 @@
 				<span class="warlock-error">{{$errors->login->first('professionalemail')}}</span>
 				<br>
 				<div>
+				<div class="col-md-4">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+				</div>
+				<div class="col-md-8">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
 				</div>
 				<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
+				</div>
+				
 				<br>
 			</div>
 			<div class="col-md-3">
@@ -55,14 +60,28 @@
 				{{Form::text('fathername', '', array('class' => 'form-control','placeholder' => 'FATHERS NAME'))}}
 				<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
 				<br>
-				{{ Form::password('password', array('class' => 'form-control','placeholder' => 'CON'))}}
-				<span class="warlock-error">{{$errors->login->first('password')}}</span>
-				<br>
-				{{ Form::password('mothername', array('class' => 'form-control','placeholder' => 'MOTHERS NAME'))}}
-				<span class="warlock-error">{{$errors->login->first('mothername')}}</span>
-				<br>
-				{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+				<div>
+				<div class="col-md-4">
+					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+				</div>
+				<div class="col-md-8">
+					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+				</div>
+				</div>
 				<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
+				<br>
+				{{Form::text('fathername', '', array('class' => 'form-control','placeholder' => 'FATHERS NAME'))}}
+				<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
+				<br>
+				<div>
+				<div class="col-md-4">
+					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+				</div>
+				<div class="col-md-8">
+					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+				</div>
+				<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
+				</div>
 				<br>
 			</div>
 			<div class="col-md-3">
