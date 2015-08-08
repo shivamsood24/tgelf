@@ -77,7 +77,7 @@
 				<br>
 				<div>
 				<div class="col-md-4 warlock-clear">
-					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+					{{Form::select('name', array('key' => 'value'))}}
 				</div>
 				<div class="col-md-8 warlock-clear">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
