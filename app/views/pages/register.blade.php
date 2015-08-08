@@ -830,71 +830,72 @@
 		<p>SOCIAL MEDIA PROFILES</p>
 			<div class="col-md-4">
 			<div class="input-prepend">
-				<span class="add-on"><i class="icon-envelope"></i></span>
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => '\f10e'))}}
+				<span class="add-on"><i class="fa fa-twitter"></i></span>
+						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
 			</div>
-				
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 				
 			</div>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-linkedin"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+				
 			</div>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-youtube-play"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+				
 			</div>
-		</div>
+			</div>
 		<br>
 		<div class="row">
 		<p>WORK MEDIA PROFILES</p>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-github"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+			
 			</div>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-behance"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+		
 			</div>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-graduation-cap"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+				
 			</div>
+		
 		</div>
 		<br>
-		<div class="row">
+				<div class="row">
 		<p>AREAS OF INTEREST</p>
 			<div class="col-md-4">
 					{{ Form::select('key_skill', array('' => 'Select Your Area Of Interest',
