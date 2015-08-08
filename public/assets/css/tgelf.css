@@ -60,11 +60,11 @@
     font-size: 18px;
 }
 
-#left
+.left
 {
 	float: left;
 }
-#right
+.right
 {
 	float: right;
 }
