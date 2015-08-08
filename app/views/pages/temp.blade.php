@@ -177,69 +177,70 @@
 		<div class="row">
 		<p>SOCIAL MEDIA PROFILES</p>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+			<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-twitter"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+				
 			</div>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-linkedin"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+				
 			</div>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-youtube-play"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+				
 			</div>
-		</div>
+			</div>
 		<br>
 		<div class="row">
 		<p>WORK MEDIA PROFILES</p>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-github"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+			
 			</div>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-behance"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+		
 			</div>
 			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
+				<div class="input-prepend">
+				<span class="add-on"><i class="fa fa-graduation-cap"></i></span>
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+			
 						
 						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
+				
 			</div>
+		
 		</div>
 		<br>
 		<div class="row">
