@@ -770,91 +770,127 @@
 			</div>
 		</fieldset>
 		<fieldset class="f3">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="col-md-3">
-						<div id="circleforregister" class="left"></div>
-					</div>
-					<div class="col-md-9">
-
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-						<br>
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'UNIVERSITY/COMPANY'))}}
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-						<br>
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'MAJOR/POSITION'))}}
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-
-					</div>
-
-				</div>
-				<div class="col-md-4">
-					{{Form::textarea('fathername', '', array('class' => 'form-control','placeholder' => 'BIO', 'rows' => 9, 'cols' => 40))}}
-					<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
-
-				</div>
+		<div class="row">
+			<div class="col-md-5">
 				<div class="col-md-3">
-
-					{{ Form::select('key_skill', array('key'=>'KEY SKILL'), null,array('class' => 'form-control')) }}
-					<br>
-					<span class="warlock-error">{{$errors->login->first('paddressline1')}}</span>
-
-					{{ Form::textarea('funfact','', array('class' => 'form-control','placeholder' => 'FUN FACT', 'rows' => 5, 'cols' => 40))}}
-					<br>
-					<span class="warlock-error">{{$errors->login->first('paddressline2')}}</span>
-				</div>
-
-			</div>
-			<br>
-			<div class="row">
-				<p>SOCIAL MEDIA PROFILES</p>
-				<div class="col-md-4">
+                    <div id="circleforregister" class="left"></div>
+                </div>
+				<div class="col-md-9">
+				 
 					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
-				<div class="col-md-4">
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+					<br>
+					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'UNIVERSITY/COMPANY'))}}
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-
+					<br>
+					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'MAJOR/POSITION'))}}
+					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+					
 				</div>
-				<div class="col-md-4">
-					{{Form::text('paddressline1', '', array('class' => 'form-control','placeholder' => 'ADDRESS LINE 1'))}}
+				
+			</div>
+			<div class="col-md-4">
+				{{Form::textarea('fathername', '', array('class' => 'form-control','placeholder' => 'BIO', 'rows' => 9, 'cols' => 40))}}
+				<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
+				
+			</div>
+			<div class="col-md-3">
+				
+				{{ Form::select('key_skill', array('key'=>'KEY SKILL'), null,array('class' => 'form-control')); }}
+				<br>
+				<span class="warlock-error">{{$errors->login->first('paddressline1')}}</span>
+
+				{{ Form::textarea('funfact','', array('class' => 'form-control','placeholder' => 'FUN FACT', 'rows' => 5, 'cols' => 40))}}
+				<br>
+				<span class="warlock-error">{{$errors->login->first('paddressline2')}}</span>
+			</div>
+			
+		</div>
+		<br>
+		<div class="row">
+		<p>SOCIAL MEDIA PROFILES</p>
+			<div class="col-md-4">
+				<div class="col-md-2 formpad">
+					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+				</div>
+				<div class="col-md-10 formpad">
+						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						
+						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 				</div>
 			</div>
-			<br>
-			<div class="row">
-				<p>WORK MEDIA PROFILES</p>
-				<div class="col-md-4">
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left'))}}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+			<div class="col-md-4">
+				<div class="col-md-2 formpad">
+					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
 				</div>
-				<div class="col-md-4">
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left'))}}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-
-				</div>
-				<div class="col-md-4">
-					{{Form::text('paddressline1', '', array('class' => 'form-control','placeholder' => 'ADDRESS LINE 1'))}}
+				<div class="col-md-10 formpad">
+						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						
+						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 				</div>
 			</div>
-			<br>
-			<div class="row">
-				<p>AREAS OF INTEREST</p>
-				<div class="col-md-4">
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left'))}}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+			<div class="col-md-4">
+				<div class="col-md-2 formpad">
+					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
 				</div>
-				<div class="col-md-4">
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left'))}}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-
-				</div>
-				<div class="col-md-4">
-					{{Form::text('paddressline1', '', array('class' => 'form-control'))}}
+				<div class="col-md-10 formpad">
+						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						
+						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 				</div>
 			</div>
-		</fieldset>
+		</div>
+		<br>
+		<div class="row">
+		<p>WORK MEDIA PROFILES</p>
+			<div class="col-md-4">
+				<div class="col-md-2 formpad">
+					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+				</div>
+				<div class="col-md-10 formpad">
+						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						
+						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="col-md-2 formpad">
+					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+				</div>
+				<div class="col-md-10 formpad">
+						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						
+						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="col-md-2 formpad">
+					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+				</div>
+				<div class="col-md-10 formpad">
+						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						
+						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+		<p>AREAS OF INTEREST</p>
+			<div class="col-md-4">
+					{{Form::text('firstname', '', array('class' => 'form-control warlock-left'))}}
+					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+			</div>
+			<div class="col-md-4">
+				{{Form::text('firstname', '', array('class' => 'form-control warlock-left'))}}
+					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+				
+			</div>
+			<div class="col-md-4">
+				{{Form::text('paddressline1', '', array('class' => 'form-control'))}}
+		</div>
+		</div>
+	</fieldset>
 		{{ Form::close() }}
 
 		<div class="row col-md-4 col-md-offset-4" style="margin-bottom: 10%;">
