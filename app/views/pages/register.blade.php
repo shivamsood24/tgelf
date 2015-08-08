@@ -796,7 +796,26 @@
 			</div>
 			<div class="col-md-3">
 				
-				{{ Form::select('key_skill', array('key'=>'KEY SKILL'), null,array('class' => 'form-control')); }}
+				{{ Form::select('key_skill', array('' => 'Select Your Key Skill',
+					'Humanitarian and social sector' => 'Humanitarian and social sector',
+							'Visual and Performing Arts' => 'Visual and Performing Arts',
+							' Economics, Business and Entrepreneurship' => 'Economics, Business and Entrepreneurship',
+							'Accounting and Finance' => 'Accounting and Finance',
+							'Biology, Health and Medicine' => 'Biology, Health and Medicine',
+							'Law and Legal Studies' => 'Law and Legal Studies',
+							'Computer Science & Mathematics' => 'Computer Science & Mathematics',
+							'Architecture & Civil Engineering' => 'Architecture & Civil Engineering',
+							'Electrical Engineering' => 'Electrical Engineering',
+							'Mechanical Engineering' => 'Mechanical Engineering',
+							'Statistics & Actuarial Sciences' => 'Statistics & Actuarial Sciences',
+							'Environmental Science & Sustainability' => 'Environmental Science & Sustainability',
+							'Chemistry' => 'Chemistry',
+							'Physics' => 'Physics',
+							'Advertising & Journalism' => 'Advertising & Journalism',
+							'Education' => '+Education',
+							'Social Sciences' => 'Social Sciences',
+							'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
+							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
 				<br>
 				<span class="warlock-error">{{$errors->login->first('paddressline1')}}</span>
 
@@ -810,9 +829,9 @@
 		<div class="row">
 		<p>SOCIAL MEDIA PROFILES</p>
 			<div class="col-md-4">
-			<div class="row">
-				<span class="add-on form-control"><i class="icon-envelope"></i></span>
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			<div class="input-prepend">
+				<span class="add-on"><i class="icon-envelope"></i></span>
+					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => '\f10e'))}}
 			</div>
 				
 						
@@ -878,16 +897,73 @@
 		<div class="row">
 		<p>AREAS OF INTEREST</p>
 			<div class="col-md-4">
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left'))}}
+					{{ Form::select('key_skill', array('' => 'Select Your Area Of Interest',
+							'Humanitarian and social sector' => 'Humanitarian and social sector',
+							'Visual and Performing Arts' => 'Visual and Performing Arts',
+							' Economics, Business and Entrepreneurship' => 'Economics, Business and Entrepreneurship',
+							'Accounting and Finance' => 'Accounting and Finance',
+							'Biology, Health and Medicine' => 'Biology, Health and Medicine',
+							'Law and Legal Studies' => 'Law and Legal Studies',
+							'Computer Science & Mathematics' => 'Computer Science & Mathematics',
+							'Architecture & Civil Engineering' => 'Architecture & Civil Engineering',
+							'Electrical Engineering' => 'Electrical Engineering',
+							'Mechanical Engineering' => 'Mechanical Engineering',
+							'Statistics & Actuarial Sciences' => 'Statistics & Actuarial Sciences',
+							'Environmental Science & Sustainability' => 'Environmental Science & Sustainability',
+							'Chemistry' => 'Chemistry',
+							'Physics' => 'Physics',
+							'Advertising & Journalism' => 'Advertising & Journalism',
+							'Education' => '+Education',
+							'Social Sciences' => 'Social Sciences',
+							'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
+							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 			</div>
 			<div class="col-md-4">
-				{{Form::text('firstname', '', array('class' => 'form-control warlock-left'))}}
+				{{ Form::select('key_skill', array('' => 'Select Your Area Of Interest',
+							'Humanitarian and social sector' => 'Humanitarian and social sector',
+							'Visual and Performing Arts' => 'Visual and Performing Arts',
+							' Economics, Business and Entrepreneurship' => 'Economics, Business and Entrepreneurship',
+							'Accounting and Finance' => 'Accounting and Finance',
+							'Biology, Health and Medicine' => 'Biology, Health and Medicine',
+							'Law and Legal Studies' => 'Law and Legal Studies',
+							'Computer Science & Mathematics' => 'Computer Science & Mathematics',
+							'Architecture & Civil Engineering' => 'Architecture & Civil Engineering',
+							'Electrical Engineering' => 'Electrical Engineering',
+							'Mechanical Engineering' => 'Mechanical Engineering',
+							'Statistics & Actuarial Sciences' => 'Statistics & Actuarial Sciences',
+							'Environmental Science & Sustainability' => 'Environmental Science & Sustainability',
+							'Chemistry' => 'Chemistry',
+							'Physics' => 'Physics',
+							'Advertising & Journalism' => 'Advertising & Journalism',
+							'Education' => '+Education',
+							'Social Sciences' => 'Social Sciences',
+							'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
+							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 				
 			</div>
 			<div class="col-md-4">
-				{{Form::text('paddressline1', '', array('class' => 'form-control'))}}
+				{{ Form::select('key_skill', array('' => 'Select Your Area Of Interest',
+							'Humanitarian and social sector' => 'Humanitarian and social sector',
+							'Visual and Performing Arts' => 'Visual and Performing Arts',
+							' Economics, Business and Entrepreneurship' => 'Economics, Business and Entrepreneurship',
+							'Accounting and Finance' => 'Accounting and Finance',
+							'Biology, Health and Medicine' => 'Biology, Health and Medicine',
+							'Law and Legal Studies' => 'Law and Legal Studies',
+							'Computer Science & Mathematics' => 'Computer Science & Mathematics',
+							'Architecture & Civil Engineering' => 'Architecture & Civil Engineering',
+							'Electrical Engineering' => 'Electrical Engineering',
+							'Mechanical Engineering' => 'Mechanical Engineering',
+							'Statistics & Actuarial Sciences' => 'Statistics & Actuarial Sciences',
+							'Environmental Science & Sustainability' => 'Environmental Science & Sustainability',
+							'Chemistry' => 'Chemistry',
+							'Physics' => 'Physics',
+							'Advertising & Journalism' => 'Advertising & Journalism',
+							'Education' => '+Education',
+							'Social Sciences' => 'Social Sciences',
+							'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
+							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
 		</div>
 		</div>
 	</fieldset>
