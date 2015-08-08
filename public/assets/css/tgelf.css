@@ -79,3 +79,15 @@
 {
 	float: right;
 }
+
+.formpad
+{
+	padding-left: 1px !important;
+    padding-right: 1px !important;
+}
+.formicons
+{
+	border: 2px #A83334 solid;
+    border-right: none;
+    font-size: 27px;
+}
