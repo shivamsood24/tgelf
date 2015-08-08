@@ -5,3 +5,10 @@ $('.next1').click(function(){
 	$('.f2').show("fade");
 
 });
+$('.next2').click(function(){
+	$('.l2').removeClass('active');
+	$('.l3').addClass('active');
+	$('.f2').hide("fade");
+	$('.f3').show("fade");
+
+});

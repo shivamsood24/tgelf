@@ -25,6 +25,17 @@
 	border-radius: 100px;
 }
 
+#circleforregister
+{
+    width: 134px;
+    height: 134px;
+    background: #A83334;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 100px;
+    margin-left: -30%;
+}
+
 .sliderheader
 {
  font-size: 62px;
