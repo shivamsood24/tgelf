@@ -1,6 +1,9 @@
 $('.next1').click(function(){
 	$('.l1').removeClass('active');
 	$('.l2').addClass('active');
+	$('#warlock-loader').show();
+	//$('#warlock-loader').hide();
+	
 	$('.f1').hide("fade");
 	$('.f2').show("fade");
 

@@ -20,6 +20,16 @@
 		padding-right: 1px;	
 	}
 
+	#warlock-loader{
+		display:none; 
+		position:fixed; 
+		left:0; 
+		top:0; 
+		z-index: 999;
+		width:100%; 
+		height:100%;
+       background-image:url("../images/background.png");
+	}
 	.input-prepend{
 	display: flex;
     margin-bottom: 10px;

@@ -25,6 +25,7 @@
     
 </head>
 <body style="background-color: #F9F9F9;">
+<div id="warlock-loader"><img src="{{asset('uploads/loading.gif')}}" style="position: fixed;left: 50%;top: 50%;" /></div>
    <section id="header">
    <div class="row">
    <div class="col-md-4 ">
