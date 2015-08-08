@@ -810,8 +810,18 @@
 		<div class="row">
 		<p>SOCIAL MEDIA PROFILES</p>
 			<div class="col-md-4">
+			<div class="row">
+				<span class="add-on form-control"><i class="icon-envelope"></i></span>
+					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+			</div>
+				
+						
+						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+				
+			</div>
+			<div class="col-md-4">
 				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
 				</div>
 				<div class="col-md-10 formpad">
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
@@ -821,17 +831,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
-				</div>
-				<div class="col-md-10 formpad">
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
-						
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
 				</div>
 				<div class="col-md-10 formpad">
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
@@ -845,7 +845,7 @@
 		<p>WORK MEDIA PROFILES</p>
 			<div class="col-md-4">
 				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
 				</div>
 				<div class="col-md-10 formpad">
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
@@ -855,7 +855,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
 				</div>
 				<div class="col-md-10 formpad">
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
@@ -865,7 +865,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="col-md-2 formpad">
-					<a href="../icon/github" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
+					<a href="#" class="soclicon form-control formicons" style="border: 2px #A83334 solid;"><i class="icon-youtube-play"></i></a>
 				</div>
 				<div class="col-md-10 formpad">
 						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}

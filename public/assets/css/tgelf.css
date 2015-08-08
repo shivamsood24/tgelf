@@ -87,7 +87,8 @@
 }
 .formicons
 {
-	border: 2px #A83334 solid;
-    border-right: none;
-    font-size: 27px;
+	    border: 2px #A83334 solid;
+    font-size: 25px !important;
+    
+
 }
