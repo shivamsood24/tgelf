@@ -16,6 +16,14 @@
 	-webkit-border-radius: 50px;
 	border-radius: 100px;
 }
+#circles {
+	width: 80px;
+	height: 80px;
+	background: #A83334;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 100px;
+}
 
 .sliderheader
 {
@@ -50,4 +58,13 @@
 	    color: #A83334 !important;
     padding: 4%;
     font-size: 18px;
+}
+
+#left
+{
+	float: left;
+}
+#right
+{
+	float: right;
 }

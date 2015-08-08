@@ -4,8 +4,10 @@
         <div class="container login-container">
             <div class="row">
                 <div class="col-md-4">
-                <div  id="circle"> </div>
+                <div  id="circles" class="left"><h4>User Name</h4></div>
+                <div id="right">
                     
+                </div>
                 </div>
                 <div class="col-md-5">
                 <h1></h1>
