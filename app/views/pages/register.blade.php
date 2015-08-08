@@ -44,10 +44,10 @@
 				<span class="warlock-error">{{$errors->login->first('professionalemail')}}</span>
 				<br>
 				<div>
-				<div class="col-md-4">
+				<div class="col-md-4 warlock-clear">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8 warlock-clear">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
 				</div>
 				<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
@@ -61,23 +61,25 @@
 				<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
 				<br>
 				<div>
-				<div class="col-md-4">
+				<div class="col-md-4 warlock-clear">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+					<br>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8 warlock-clear">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+					<br>
 				</div>
 				</div>
-				<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
 				<br>
+				<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
 				{{Form::text('fathername', '', array('class' => 'form-control','placeholder' => 'FATHERS NAME'))}}
 				<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
 				<br>
 				<div>
-				<div class="col-md-4">
+				<div class="col-md-4 warlock-clear">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8 warlock-clear">
 					{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
 				</div>
 				<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
