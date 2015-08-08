@@ -12,9 +12,13 @@
 	width: 100%;
 }
 .warlock-field{
-	margin-bottom: 100px;
+	/*margin-bottom: 100px;*/
 }
 
+
+#registerform fieldset:not(:first-of-type) {
+	display: none;
+}
 
 /*progressbar*/
 #progressbar {

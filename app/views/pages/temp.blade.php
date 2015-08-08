@@ -41,7 +41,7 @@
 	{{Form::text('fathername', '', array('class' => 'form-control','placeholder' => 'FATHERS NAME'))}}
 	<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
 	<br>
-	{{ Form::password('password', array('class' => 'form-control','placeholder' => 'PASSWORD'))}}
+	{{ Form::password('password', array('class' => 'form-control','placeholder' => 'CON'))}}
 	<span class="warlock-error">{{$errors->login->first('password')}}</span>
 	<br>
 	{{ Form::password('mothername', array('class' => 'form-control','placeholder' => 'MOTHERS NAME'))}}
@@ -55,34 +55,48 @@
 	<div class="warlock-inline-head">PERMANENT ADDRESS</div>
 	{{Form::text('paddressline1', '', array('class' => 'form-control','placeholder' => 'ADDRESS LINE 1'))}}
 	<br>
-	<span class="warlock-error">{{$errors->login->first('username')}}</span>
+	<span class="warlock-error">{{$errors->login->first('paddressline1')}}</span>
 	
 	{{ Form::text('paddressline2','', array('class' => 'form-control','placeholder' => 'ADDRESS LINE 2'))}}
 	<br>
-	<span class="warlock-error">{{$errors->login->first('password')}}</span>
-	{{ Form::password('confirmpassword', array('class' => 'form-control','placeholder' => 'CONFIRM PASSWORD'))}}
+	<span class="warlock-error">{{$errors->login->first('paddressline2')}}</span>
+	<div class="warlock-inline">
+	{{Form::text('pcity', '', array('class' => 'form-control warlock-left','placeholder' => 'CITY'))}}
+	<span class="warlock-error">{{$errors->login->first('pcity')}}</span>
+	{{Form::text('pstate', '', array('class' => 'form-control warlock-right','placeholder' => 'STATE'))}}
+	<span class="warlock-error">{{$errors->login->first('pstate')}}</span>
+	</div>
 	<br>
-	<span class="warlock-error">{{$errors->login->first('confirmpassword')}}</span>
-	{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
-	<br>
-	<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
-	{{ Form::submit('GET STARTED', array('class' => 'btn btn-default login-btn next1 last-btn','data-val'=> '1'))}}
+	<div class="warlock-inline">
+	{{Form::text('pcode', '', array('class' => 'form-control warlock-left','placeholder' => 'PIN CODE'))}}
+	<span class="warlock-error">{{$errors->login->first('pcode')}}</span>
+	{{Form::text('pcountry', '', array('class' => 'form-control warlock-right','placeholder' => 'COUNTRY'))}}
+	<span class="warlock-error">{{$errors->login->first('pcountry')}}</span>
+	</div>
 	</div>
 	<div class="col-md-3">
 	<div class="warlock-inline-head">PRESENT ADDRESS</div>
-	{{Form::text('username', '', array('class' => 'form-control','placeholder' => 'USER NAME'))}}
+	{{Form::text('caddressline1', '', array('class' => 'form-control','placeholder' => 'ADDRESS LINE 1'))}}
 	<br>
-	<span class="warlock-error">{{$errors->login->first('username')}}</span>
+	<span class="warlock-error">{{$errors->login->first('caddressline1')}}</span>
 	
-	{{ Form::password('password', array('class' => 'form-control','placeholder' => 'PASSWORD'))}}
+	{{ Form::text('caddressline2','', array('class' => 'form-control','placeholder' => 'ADDRESS LINE 2'))}}
 	<br>
-	<span class="warlock-error">{{$errors->login->first('password')}}</span>
-	{{ Form::password('confirmpassword', array('class' => 'form-control','placeholder' => 'CONFIRM PASSWORD'))}}
+	<span class="warlock-error">{{$errors->login->first('caddressline2')}}</span>
+	<div class="warlock-inline">
+	{{Form::text('ccity', '', array('class' => 'form-control warlock-left','placeholder' => 'CITY'))}}
+	<span class="warlock-error">{{$errors->login->first('ccity')}}</span>
+	{{Form::text('cstate', '', array('class' => 'form-control warlock-right','placeholder' => 'STATE'))}}
+	<span class="warlock-error">{{$errors->login->first('cstate')}}</span>
+	</div>
 	<br>
-	<span class="warlock-error">{{$errors->login->first('confirmpassword')}}</span>
-	{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+	<div class="warlock-inline">
+	{{Form::text('ccode', '', array('class' => 'form-control warlock-left','placeholder' => 'PIN CODE'))}}
+	<span class="warlock-error">{{$errors->login->first('ccode')}}</span>
+	{{Form::text('ccountry', '', array('class' => 'form-control warlock-right','placeholder' => 'COUNTRY'))}}
+	<span class="warlock-error">{{$errors->login->first('ccountry')}}</span>
+	</div>
 	<br>
-	<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
 	{{ Form::submit('GET STARTED', array('class' => 'btn btn-default login-btn next1 last-btn','data-val'=> '1'))}}
 	</div>
 	</div>
