@@ -2,152 +2,156 @@
 	min-height: 500px;
 	margin-bottom: 100px;
 	clear: both;
-}*/
-.login-btn{
-	border: 2px solid #A83334;
-	text-align: center;
-	background-color: #A83334;
-	color: white;
-	height: 65px;
-	width: 100%;
-}
-.warlock-field{
-	/*margin-bottom: 100px;*/
-}
+	}*/
+	.login-btn{
+		border: 2px solid #A83334;
+		text-align: center;
+		background-color: #A83334;
+		color: white;
+		height: 65px;
+		width: 100%;
+	}
+	.warlock-field{
+		/*margin-bottom: 100px;*/
+	}
 
+	.warlock-clear{
+		padding-left: 1px;
+		padding-right: 1px;	
+	}
 
-#registerform fieldset:not(:first-of-type) {
-	display: none;
-}
+	#registerform fieldset:not(:first-of-type) {
+		display: none;
+	}
 
-/*progressbar*/
-#progressbar {
-	margin-bottom: 30px;
-	overflow: hidden;
-	/*CSS counters to number the steps*/
-	counter-reset: step;
-	text-align: -webkit-center;
-}
-#progressbar li {
-	list-style-type: none;
-	color: #194759;
-	text-transform: uppercase;
-	font-size: 9px;
-	width: 33.33%;
-	float: left;
-	position: relative;
-}
-#progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: #fff;
-	background: #194759;
-	border-radius: 20px;
-	margin: 0 auto 5px auto;
-}
-/*progressbar connectors*/
-#progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: #194759;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
-}
-#progressbar li:first-child:after {
-	/*connector not needed before the first step*/
-	content: none; 
-}
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after{
-	background: #A83334;
-	color: white;
-}
+	/*progressbar*/
+	#progressbar {
+		margin-bottom: 30px;
+		overflow: hidden;
+		/*CSS counters to number the steps*/
+		counter-reset: step;
+		text-align: -webkit-center;
+	}
+	#progressbar li {
+		list-style-type: none;
+		color: #194759;
+		text-transform: uppercase;
+		font-size: 9px;
+		width: 33.33%;
+		float: left;
+		position: relative;
+	}
+	#progressbar li:before {
+		content: counter(step);
+		counter-increment: step;
+		width: 20px;
+		line-height: 20px;
+		display: block;
+		font-size: 10px;
+		color: #fff;
+		background: #194759;
+		border-radius: 20px;
+		margin: 0 auto 5px auto;
+	}
+	/*progressbar connectors*/
+	#progressbar li:after {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: #194759;
+		position: absolute;
+		left: -50%;
+		top: 9px;
+		z-index: -1; /*put it behind the numbers*/
+	}
+	#progressbar li:first-child:after {
+		/*connector not needed before the first step*/
+		content: none; 
+	}
+	/*marking active/completed steps green*/
+	/*The number of the step and the connector before it = green*/
+	#progressbar li.active:before,  #progressbar li.active:after{
+		background: #A83334;
+		color: white;
+	}
 
-.warlock-inline{
-	display: flex;
-}
+	.warlock-inline{
+		display: flex;
+	}
 
-.warlock-left{
-	margin-right: 3px;
-}
+	.warlock-left{
+		margin-right: 3px;
+	}
 
-.warlock-right{
-	margin-left: 3px;
-}
+	.warlock-right{
+		margin-left: 3px;
+	}
 
-.warlock-inline-head{
-	text-align: left;
-	color: #A83334;
-	border-bottom: 2px solid #A83334;
-    margin-bottom: 10px;
-}
-#progressbar li.active{
-	color: #A83334;
-}
-.warlock-error{
-	color:#A83334;
-	text-align: center;
-	display: block;
-}
-#war-header{
-	position: relative;
-	text-align: center;
-	text-transform: uppercase;
-	z-index: 1;  
-	color: #A83334;
-}
-
-#war-header:before{
-	border-top: 2px solid #194759;
-	content:"";
-	margin: 0 auto;
-	position: absolute;
-	top: 15px; left: 0; right: 0; bottom: 0;
-	width: 95%;
-	z-index: -1;
-}
-
-#war-header-inner{
-	background: #F9F9F9; padding: 0 10px;
-}
-#footer{
-	padding: 0.25% !important;
-	background-color: #194759;
-}
-
-@media (min-width:1800px) {
-	.login-container{
-
-		padding-top: 8%;
+	.warlock-inline-head{
+		text-align: left;
+		color: #A83334;
+		border-bottom: 2px solid #A83334;
+		margin-bottom: 10px;
+	}
+	#progressbar li.active{
+		color: #A83334;
+	}
+	.warlock-error{
+		color:#A83334;
+		text-align: center;
+		display: block;
 	}
 	#war-header{
-		margin-bottom: 10%;
-	}
-}
-@media (max-width:1450px ) {
-	.login-container{
-		padding-top: 6%;
-	}
-
-	#war-header{
-		margin-bottom: 8%;
-	}
-}
-@media (max-width:900px ) {
-	.login-container{
-		padding-top: 16%;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		z-index: 1;  
+		color: #A83334;
 	}
 
-	#war-header{
-		margin-bottom: 8%;
+	#war-header:before{
+		border-top: 2px solid #194759;
+		content:"";
+		margin: 0 auto;
+		position: absolute;
+		top: 15px; left: 0; right: 0; bottom: 0;
+		width: 95%;
+		z-index: -1;
 	}
-}
+
+	#war-header-inner{
+		background: #F9F9F9; padding: 0 10px;
+	}
+	#footer{
+		padding: 0.25% !important;
+		background-color: #194759;
+	}
+
+	@media (min-width:1800px) {
+		.login-container{
+
+			padding-top: 8%;
+		}
+		#war-header{
+			margin-bottom: 10%;
+		}
+	}
+	@media (max-width:1450px ) {
+		.login-container{
+			padding-top: 6%;
+		}
+
+		#war-header{
+			margin-bottom: 8%;
+		}
+	}
+	@media (max-width:900px ) {
+		.login-container{
+			padding-top: 16%;
+		}
+
+		#war-header{
+			margin-bottom: 8%;
+		}
+	}
 
