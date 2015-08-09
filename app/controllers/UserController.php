@@ -53,4 +53,40 @@ class UserController extends BaseController
 		return View::make('pages.userprofile',$data);
 	}
 
+
+	public function checkusername()
+	{
+		$username = Input::get('username');
+		$result = User::where('username',$username)->first();
+		//return $result;
+		if ($result){
+			return "true";
+		}
+		
+		else {
+			return "false";
+		}
+	}
+
+	public function checkcode()
+	{
+		$codecheck = Input::get('codecheck');
+		$result = UniqueCode::where('code',$codecheck)->where('used',1)->first();
+		//return $result;
+		if ($result){
+			return "true"; //code is valid and used
+		}
+		
+		else {
+			$result1 = UniqueCode::where('code',$codecheck)->first();
+			if($result1){
+				return "valid"; //code is valid
+			}
+			else
+			{
+				return "false"; // code is invalid
+			}
+		}
+	}
+
 }

@@ -11,18 +11,18 @@
 	</ul>
 	<fieldset class="f1">
 		<div class="row col-md-4 col-md-offset-4 ">
-			{{Form::text('username', '', array('class' => 'form-control','placeholder' => 'USER NAME'))}}
+			{{Form::text('username', '', array('class' => 'form-control','id'=> 'usercheck','placeholder' => 'USER NAME'))}}
+			<span class="warlock-error" id="usernameerror">{{$errors->login->first('username')}}</span>
 			<br>
-			<span class="warlock-error">{{$errors->login->first('username')}}</span>
-			{{ Form::password('password', array('class' => 'form-control','placeholder' => 'PASSWORD'))}}
-			<br>
+			{{ Form::password('password', array('class' => 'form-control','id'=> 'password','placeholder' => 'PASSWORD'))}}
 			<span class="warlock-error">{{$errors->login->first('password')}}</span>
-			{{ Form::password('confirmpassword', array('class' => 'form-control','placeholder' => 'CONFIRM PASSWORD'))}}
 			<br>
-			<span class="warlock-error">{{$errors->login->first('confirmpassword')}}</span>
-			{{Form::text('uniquecode', '', array('class' => 'form-control','placeholder' => 'VERIFICATION CODE'))}}
+			{{ Form::password('confirmpassword', array('class' => 'form-control','id'=> 'confirmpassword','placeholder' => 'CONFIRM PASSWORD'))}}
+			<span class="warlock-error" id="passworderror">{{$errors->login->first('confirmpassword')}}</span>
 			<br>
-			<span class="warlock-error">{{$errors->login->first('uniquecode')}}</span>
+			{{Form::text('uniquecode', '', array('class' => 'form-control','id'=> 'codecheck','placeholder' => 'VERIFICATION CODE'))}}
+			<span class="warlock-error" id="codeerror">{{$errors->login->first('uniquecode')}}</span>
+			<br>
 			{{ Form::button('GET STARTED', array('class' => 'btn btn-default login-btn next1 last-btn','data-val'=> '1'))}}
 		</div>
 	</fieldset>

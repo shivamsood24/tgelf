@@ -18,6 +18,8 @@ Route::get('/', 'IndexController@index');
 Route::get('/login', 'LoginController@index');
 Route::post('/login','LoginController@login');
 Route::get('/register','UserController@index');
+Route::post('/checkusername','UserController@checkusername');
+Route::post('/checkcode','UserController@checkcode');
 Route::get('/profile/{username}','UserController@profile');
 Route::get('/temp','ProfileController@temp');
 Route::get('createuser','UserController@index');

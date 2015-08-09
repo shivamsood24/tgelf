@@ -75,6 +75,7 @@
 		width: 33.33%;
 		float: left;
 		position: relative;
+		text-align: -moz-center;
 	}
 	#progressbar li:before {
 		content: counter(step);
