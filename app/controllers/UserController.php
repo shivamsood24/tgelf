@@ -60,9 +60,9 @@ class UserController extends BaseController
 
 		$rules = [
 		'username' => 'required|alpha',
-		'password' => 'required|alpha_num|between:4,15|confirmed',
+		'password' => 'required|alpha_num|between:4,15',
 		'confirmpassword' => 'required|alpha_num|between:4,15',
-		'uniquecode' => 'required|alpha',
+		'uniquecode' => 'required',
 		'firstname' => 'required|alpha',
 		'lastname' => 'required|alpha',
 		'personalemail' => 'required|email',
@@ -88,8 +88,8 @@ class UserController extends BaseController
 		'ccode' => 'required|numeric',
 		'ccountry' => 'required|alpha',
 		'lastname' => 'required|alpha',
-		'company' => 'required|alpha',
-		'position' => 'required|alpha',
+		'company' => 'required',
+		'position' => 'required',
 		'bio' => 'required|max:300',
 		'key_skill' => 'required',
 		'funfact' => 'required|max:100',
@@ -99,18 +99,20 @@ class UserController extends BaseController
 		'github' => 'required|url',
 		'behance' => 'required|url',
 		'academia' => 'required|url',
-		'key_interest1' => 'required|url',
-		'key_interest2' => 'required|url',
-		'key_interest3' => 'required|url'
+		'key_interest1' => 'required',
+		'key_interest2' => 'required',
+		'key_interest3' => 'required'
 		];
 
 		$validator = Validator::make(Input::all(), $rules);
 
 		if($validator->passes())
 		{
+			DB::transaction(function(){
+				DB::table('users')->insert(array('firstname' => $firstname,'lastname' => $lastname,'username' => $username,'password' => $password,'uniquecode' => $uniquecode ));
+			});
 			DB::transaction(function()
 			{
-				DB::table('users')->insert(array('firstname' => $firstname,'lastname' => $lastname,'username' => $username,'password' => $password,'uniquecode' => $uniquecode ));
 				$results = DB::select('select * from users where username = ?', $username);
 				DB::table('unique_codes')->update(array('used' => 1))->where('code' , $uniquecode);
 				if (Input::file('image')->isValid()) {
@@ -127,8 +129,11 @@ class UserController extends BaseController
 			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest1));
 			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest2));
 			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest3));
+			  DB::table('sociallinks')->insert(array('user_id' => $results->id,'twitter' => $twitter,'linkedin' => $linkedin,'youtube' => $youtube,'github' => $github,'academia' => $academia,'behance' => $behance));
 
 			});
+
+			return Redirect::to('/profile/'.$username);
 		}
 
 		else

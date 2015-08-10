@@ -965,6 +965,7 @@
 							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
 		</div>
 		</div>
+		{{ Form::submit('SUBMIT', array('class' => 'btn btn-default login-btn next2 last-btn','data-val'=> '1'))}}
 	</fieldset>
 		{{ Form::close() }}
 
