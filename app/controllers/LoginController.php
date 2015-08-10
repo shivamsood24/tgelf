@@ -27,7 +27,7 @@ class LoginController extends BaseController {
 			];
 		
 		$rules = [
-			'username' => 'required|alpha',
+			'username' => 'required|alpha_num',
 			'password' => 'required|alpha_num|between:5,20',
 		];
 
@@ -47,7 +47,9 @@ class LoginController extends BaseController {
 		}
 		else
 		{
-			return Redirect::to('login')->withErrors($validator,'login')->withInput(Input::except('password'));
+			//return Redirect::to('login')->withErrors($validator,'login')->with('login_errors',true);
+			  return Redirect::back()->withInput()->with('message','Username/Password Incorrrect!!');
+
 		}
 			
 

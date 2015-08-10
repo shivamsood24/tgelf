@@ -6,7 +6,7 @@
 <div class="row col-md-4 col-md-offset-4 ">
 
 {{ Form::open(array('url' => 'login','method' => 'post','autocomplete' => 'off')) }}
- 
+ 	<div style="text-align: center;color:#a83334">{{Session::get('message')}}</div>
 	{{Form::text('username', '', array('class' => 'form-control','placeholder' => 'USER NAME'))}}
 	<br>
 	<span class="warlock-error">{{$errors->login->first('username')}}</span>
