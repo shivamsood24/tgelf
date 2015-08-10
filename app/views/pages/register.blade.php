@@ -771,12 +771,13 @@
 		<div class="row">
 			<div class="col-md-5">
 				<div class="col-md-3">
-                    <div id="circleforregister" class="left"></div>
+                    <div id="circleforregister" class="left">
+                    	
+                    </div>
                 </div>
 				<div class="col-md-9">
-				 
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+				 {{Form::file('image',array('class' => 'form-control','id' => 'warlock-upload' ))}}
+					<span class="warlock-error">{{$errors->login->first('image')}}</span>
 					<br>
 					{{Form::text('company', '', array('class' => 'form-control warlock-left','placeholder' => 'UNIVERSITY/COMPANY'))}}
 					<span class="warlock-error">{{$errors->login->first('company')}}</span>

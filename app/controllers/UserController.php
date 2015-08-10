@@ -15,13 +15,49 @@ class UserController extends BaseController
 	}
 	public function createuser(){
 
-		$credentials = [
-		'username' => Input::get('username'),
-		'password' => Input::get('password'),
-		'confirmpassword' => Input::get('confirmpassword'),
-		'uniquecode' => Input::get('uniquecode')
-		];
-		
+		$firstname = Input::get('firstname');
+		$lastname = Input::get('lastname');
+		$username = Input::get('username');
+		$uniquecode = Input::get('uniquecode');
+		$password = Input::get('password');
+		$personalemail = Input::get('personalemail');
+		$professionalemail = Input::get('professionalemail');
+		$countrycode = Input::get('countrycode');
+		$contactno = Input::get('contactno');
+		$fathername = Input::get('fathername');
+		$countrycodefather = Input::get('countrycodefather');
+		$contactnofather = Input::get('contactnofather');
+		$mothername = Input::get('mothername');
+		$countrycodemother = Input::get('countrycodemother');
+		$contactnomother = Input::get('contactnomother');
+		$paddressline1 = Input::get('paddressline1');
+		$paddressline2 = Input::get('paddressline2');
+		$pcity = Input::get('pcity');
+		$pstate = Input::get('pstate');
+		$pcode = Input::get('pcode');
+		$pcountry = Input::get('pcountry');
+		$caddressline1 = Input::get('caddressline1');
+		$caddressline2 = Input::get('caddressline2');
+		$ccity = Input::get('ccity');
+		$cstate = Input::get('cstate');
+		$ccode = Input::get('ccode');
+		$ccountry = Input::get('ccountry');
+		$fullname = Input::get('fullname');
+		$company = Input::get('company');
+		$position = Input::get('position');
+		$bio = Input::get('bio');
+		$key_skill = Input::get('key_skill');
+		$funfact = Input::get('funfact');
+		$linkedin = Input::get('linkedin');
+		$youtube = Input::get('youtube');
+		$github = Input::get('github');
+		$behance = Input::get('behance');
+		$academia = Input::get('academia');
+		$key_interest1 = Input::get('key_interest1');
+		$key_interest2 = Input::get('key_interest2');
+		$key_interest3 = Input::get('key_interest3');
+
+
 		$rules = [
 		'username' => 'required|alpha',
 		'password' => 'required|alpha_num|between:4,15|confirmed',
@@ -37,7 +73,7 @@ class UserController extends BaseController
 		'countrycodefather' => 'required',
 		'contactnofather' => 'required|min:10|max:10',
 		'mothername' => 'required|alpha',
-		'countrycodefather' => 'required',
+		'countrycodemother' => 'required',
 		'contactnomother' => 'required|min:10|max:10',
 		'paddressline1' => 'required|alpha|max:40',
 		'paddressline2' => 'required|alpha:max:40',
@@ -72,51 +108,23 @@ class UserController extends BaseController
 
 		if($validator->passes())
 		{
-			//return Redirect::to('success');
-			DB::beginTransaction()
+			DB::transaction(function()
+			{
+				DB::table('users')->insert(array('firstname' => $firstname,'lastname' => $lastname,'username' => $username,'password' => $password,'uniquecode' => $uniquecode ));
+				$results = DB::select('select * from users where username = ?', $username);
+				DB::table('unique_codes')->update(array('used' => 1))->where('code' , $uniquecode);
+				if (Input::file('image')->isValid()) {
+			      $destinationPath = 'uploads/profile'; // upload path
+			      $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
+			      $fileName = rand(11111,99999).'.'.$extension; // renameing image
+			      Input::file('image')->move($destinationPath, $fileName);
+			      DB::table('userprofiles')->insert(array('user_id' => $results->id,'countrycode' => $countrycode,'contactno' => $contactno,'personalemail' => $personalemail,'professionalemail' => $professionalemail,'bio' => $bio,'fathername' => $fathername,'mothername' => $mothername,'photo' => $destinationPath.'/'.$fileName,'universitycompany' => $company,'majorposition' => $position,'funfact' => $funfact,'countrycodefather' => $countrycodefather,'contactnofather' => $contactnofather,'countrycodemother' => $countrycodemother,'contactnomother' => $contactnomother));
+			      
+			  }
 
-			try {
-    // Validate, then create if valid
-				$newAcct = Account::create( ['accountname' => Input::get('accountname')] );
-			} catch(ValidationException $e)
-			{
-    // Rollback and then redirect
-    // back to form with errors
-				DB::rollback();
-				return Redirect::to('/form')
-				->withErrors( $e->getErrors() )
-				->withInput();
-			} catch(\Exception $e)
-			{
-				DB::rollback();
-				throw $e;
-			}
-
-			try {
-    // Validate, then create if valid
-				$newUser = User::create([
-					'username' => Input::get('username'),
-					'account_id' => $newAcct->id
-					]);
-			} catch(ValidationException $e)
-			{
-    // Rollback and then redirect
-    // back to form with errors
-				DB::rollback();
-				return Redirect::to('/form')
-				->withErrors( $e->getErrors() )
-				->withInput();
-			} catch(\Exception $e)
-			{
-				DB::rollback();
-				throw $e;
-			}
-
-// If we reach here, then
-// data is valid and working.
-// Commit the queries!
-			DB::commit();
+			});
 		}
+
 		else
 		{
 			return Redirect::to('register')->withErrors($validator,'login')->withInput(Input::except('password','confirmpassword'));
