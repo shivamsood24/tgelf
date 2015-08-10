@@ -3,7 +3,7 @@
 
 <div class="container login-container">
 	<h1 id="" style="text-align: center;margin-bottom: 30px"><span id="war-header-inner" style="color:#A83334">REGISTER</span></h1>
-	{{ Form::open(array('url' => 'createuser','method' => 'post','autocomplete' => 'off','id' => 'registerform')) }}
+	{{ Form::open(array('url' => 'createuser','method' => 'post','autocomplete' => 'off','id' => 'registerform','files' => true)) }}
 	<ul id="progressbar">
 		<li class="l1 active">Account Setup</li>
 		<li class="l2">Social Profiles</li>
@@ -763,7 +763,7 @@
 						<span class="warlock-error">{{$errors->login->first('ccountry')}}</span>
 					</div>
 					<br>
-					{{ Form::button('REGISTER', array('class' => 'btn btn-default login-btn next2 last-btn','data-val'=> '1'))}}
+					{{ Form::button('SET YOUR PROFILE', array('class' => 'btn btn-default login-btn next2 last-btn','data-val'=> '1'))}}
 				</div>
 			</div>
 		</fieldset>
@@ -779,10 +779,10 @@
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 					<br>
 					{{Form::text('company', '', array('class' => 'form-control warlock-left','placeholder' => 'UNIVERSITY/COMPANY'))}}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+					<span class="warlock-error">{{$errors->login->first('company')}}</span>
 					<br>
 					{{Form::text('position', '', array('class' => 'form-control warlock-left','placeholder' => 'MAJOR/POSITION'))}}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+					<span class="warlock-error">{{$errors->login->first('position')}}</span>
 					
 				</div>
 				
@@ -814,12 +814,11 @@
 							'Social Sciences' => 'Social Sciences',
 							'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
 							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
+				<span class="warlock-error">{{$errors->login->first('key_skill')}}</span>
 				<br>
-				<span class="warlock-error">{{$errors->login->first('paddressline1')}}</span>
-
 				{{ Form::textarea('funfact','', array('class' => 'form-control','placeholder' => 'FUN FACT', 'rows' => 5, 'cols' => 40))}}
 				<br>
-				<span class="warlock-error">{{$errors->login->first('paddressline2')}}</span>
+				<span class="warlock-error">{{$errors->login->first('funfact')}}</span>
 			</div>
 			
 		</div>
@@ -833,7 +832,7 @@
 			</div>
 			
 						
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+						<span class="warlock-error">{{$errors->login->first('twitter')}}</span>
 				
 			</div>
 			<div class="col-md-4">
@@ -843,7 +842,7 @@
 			</div>
 			
 						
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+						<span class="warlock-error">{{$errors->login->first('linkedin, link)')}}</span>
 				
 			</div>
 			<div class="col-md-4">
@@ -853,7 +852,7 @@
 			</div>
 			
 						
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+						<span class="warlock-error">{{$errors->login->first('youtube')}}</span>
 				
 			</div>
 			</div>
@@ -867,7 +866,7 @@
 			</div>
 			
 						
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+						<span class="warlock-error">{{$errors->login->first('github')}}</span>
 			
 			</div>
 			<div class="col-md-4">
@@ -877,7 +876,7 @@
 			</div>
 			
 						
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+						<span class="warlock-error">{{$errors->login->first('behance')}}</span>
 		
 			</div>
 			<div class="col-md-4">
@@ -887,7 +886,7 @@
 			</div>
 			
 						
-						<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+						<span class="warlock-error">{{$errors->login->first('academia')}}</span>
 				
 			</div>
 		
@@ -916,7 +915,7 @@
 							'Social Sciences' => 'Social Sciences',
 							'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
 							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+					<span class="warlock-error">{{$errors->login->first('key_interest1')}}</span>
 			</div>
 			<div class="col-md-4">
 				{{ Form::select('key_interest2', array('' => 'Select Your Area Of Interest',
@@ -939,7 +938,7 @@
 							'Social Sciences' => 'Social Sciences',
 							'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
 							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
-					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
+					<span class="warlock-error">{{$errors->login->first('key_interest2')}}</span>
 				
 			</div>
 			<div class="col-md-4">
