@@ -19,7 +19,7 @@ class UserController extends BaseController
 		$lastname = Input::get('lastname');
 		$username = Input::get('username');
 		$uniquecode = Input::get('uniquecode');
-		$password = Input::get('password');
+		$password = Hash::make(Input::get('password'));
 		$personalemail = Input::get('personalemail');
 		$professionalemail = Input::get('professionalemail');
 		$countrycode = Input::get('countrycode');
@@ -51,6 +51,7 @@ class UserController extends BaseController
 		$linkedin = Input::get('linkedin');
 		$youtube = Input::get('youtube');
 		$github = Input::get('github');
+		$twitter = Input::get('twitter');
 		$behance = Input::get('behance');
 		$academia = Input::get('academia');
 		$key_interest1 = Input::get('key_interest1');
@@ -59,35 +60,35 @@ class UserController extends BaseController
 
 
 		$rules = [
-		'username' => 'required|alpha',
-		'password' => 'required|alpha_num|between:4,15',
-		'confirmpassword' => 'required|alpha_num|between:4,15',
+		'username' => 'required',
+		'password' => 'required||between:4,15',
+		'confirmpassword' => 'required||between:4,15',
 		'uniquecode' => 'required',
-		'firstname' => 'required|alpha',
-		'lastname' => 'required|alpha',
+		'firstname' => 'required',
+		'lastname' => 'required',
 		'personalemail' => 'required|email',
 		'professionalemail' => 'required|email',
 		'countrycode' => 'required',
 		'contactno' => 'required|min:10|max:10',
-		'fathername' => 'required|alpha',
+		'fathername' => 'required',
 		'countrycodefather' => 'required',
 		'contactnofather' => 'required|min:10|max:10',
-		'mothername' => 'required|alpha',
+		'mothername' => 'required',
 		'countrycodemother' => 'required',
 		'contactnomother' => 'required|min:10|max:10',
-		'paddressline1' => 'required|alpha|max:40',
-		'paddressline2' => 'required|alpha:max:40',
-		'pcity' => 'required|alpha',
-		'pstate' => 'required|alpha',
+		'paddressline1' => 'required||max:40',
+		'paddressline2' => 'required|:max:40',
+		'pcity' => 'required',
+		'pstate' => 'required',
 		'pcode' => 'required|numeric',
-		'pcountry' => 'required|alpha',
-		'caddressline1' => 'required|alpha|max:40',
-		'caddressline2' => 'required|alpha:max:40',
-		'ccity' => 'required|alpha',
-		'cstate' => 'required|alpha',
+		'pcountry' => 'required',
+		'caddressline1' => 'required||max:40',
+		'caddressline2' => 'required|:max:40',
+		'ccity' => 'required',
+		'cstate' => 'required',
 		'ccode' => 'required|numeric',
-		'ccountry' => 'required|alpha',
-		'lastname' => 'required|alpha',
+		'ccountry' => 'required',
+		'lastname' => 'required',
 		'company' => 'required',
 		'position' => 'required',
 		'bio' => 'required|max:300',
@@ -108,30 +109,25 @@ class UserController extends BaseController
 
 		if($validator->passes())
 		{
-			DB::transaction(function(){
-				DB::table('users')->insert(array('firstname' => $firstname,'lastname' => $lastname,'username' => $username,'password' => $password,'uniquecode' => $uniquecode ));
-			});
-			DB::transaction(function()
-			{
-				$results = DB::select('select * from users where username = ?', $username);
-				DB::table('unique_codes')->update(array('used' => 1))->where('code' , $uniquecode);
+			
+				$id = DB::table('users')->insertGetId(array('firstname' => $firstname,'lastname' => $lastname,'username' => $username,'password' => $password,'uniquecode' => $uniquecode ));
+				DB::table('unique_codes')->where('code', $uniquecode)->update(array('used' => 1));
+				
 				if (Input::file('image')->isValid()) {
 			      $destinationPath = 'uploads/profile'; // upload path
 			      $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
 			      $fileName = rand(11111,99999).'.'.$extension; // renameing image
 			      Input::file('image')->move($destinationPath, $fileName);
-			      DB::table('userprofiles')->insert(array('user_id' => $results->id,'countrycode' => $countrycode,'contactno' => $contactno,'personalemail' => $personalemail,'professionalemail' => $professionalemail,'bio' => $bio,'fathername' => $fathername,'mothername' => $mothername,'photo' => $destinationPath.'/'.$fileName,'universitycompany' => $company,'majorposition' => $position,'funfact' => $funfact,'countrycodefather' => $countrycodefather,'contactnofather' => $contactnofather,'countrycodemother' => $countrycodemother,'contactnomother' => $contactnomother));
+			      DB::table('user_profiles')->insert(array('user_id' => $id,'countrycode' => $countrycode,'contactno' => $contactno,'personalemail' => $personalemail,'professionalemail' => $professionalemail,'bio' => $bio,'fathername' => $fathername,'mothername' => $mothername,'photo' => $destinationPath.'/'.$fileName,'universitycompany' => $company,'majorposition' => $position,'funfact' => $funfact,'countrycodefather' => $countrycodefather,'contactnofather' => $contactnofather,'countrycodemother' => $countrycodemother,'contactnomother' => $contactnomother));
 
 			  }
-			  DB::table('user_addresses')->insert(array('user_id' => $results->id,'ispresent' => '1','addressline1' => $caddressline1,'addressline2' => $caddressline2,'city' => $ccity,'state' => $cstate,'country' => $ccountry,'pincode' => $ccode));
-			  DB::table('user_addresses')->insert(array('user_id' => $results->id,'ispresent' => '0','addressline1' => $paddressline1,'addressline2' => $paddressline2,'city' => $pcity,'state' => $pstate,'country' => $pcountry,'pincode' => $pcode));
-			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '1','name' => $key_skill));
-			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest1));
-			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest2));
-			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest3));
-			  DB::table('sociallinks')->insert(array('user_id' => $results->id,'twitter' => $twitter,'linkedin' => $linkedin,'youtube' => $youtube,'github' => $github,'academia' => $academia,'behance' => $behance));
-
-			});
+			  DB::table('user_addresses')->insert(array('user_id' => $id,'ispresent' => '1','addressline1' => $caddressline1,'addressline2' => $caddressline2,'city' => $ccity,'state' => $cstate,'country' => $ccountry,'pincode' => $ccode));
+			  DB::table('user_addresses')->insert(array('user_id' => $id,'ispresent' => '0','addressline1' => $paddressline1,'addressline2' => $paddressline2,'city' => $pcity,'state' => $pstate,'country' => $pcountry,'pincode' => $pcode));
+			  DB::table('userinterests')->insert(array('user_id' => $id,'isprimary' => '1','name' => $key_skill));
+			  DB::table('userinterests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest1));
+			  DB::table('userinterests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest2));
+			  DB::table('userinterests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest3));
+			  DB::table('social_links')->insert(array('user_id' => $id,'twitter' => $twitter,'linkedin' => $linkedin,'youtube' => $youtube,'github' => $github,'academia' => $academia,'behance' => $behance));
 
 			return Redirect::to('/profile/'.$username);
 		}
