@@ -493,8 +493,8 @@
 					</div>
 					<br>
 					<span class="warlock-error">{{$errors->login->first('contactnofather')}}</span>
-					{{Form::text('fathername', '', array('class' => 'form-control','placeholder' => 'FATHERS NAME'))}}
-					<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
+					{{Form::text('mothername', '', array('class' => 'form-control','placeholder' => 'MOTHERS NAME'))}}
+					<span class="warlock-error">{{$errors->login->first('mothername')}}</span>
 					<br>
 					<div>
 						<div class="col-md-4 warlock-clear">
@@ -778,18 +778,18 @@
 					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 					<br>
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'UNIVERSITY/COMPANY'))}}
+					{{Form::text('company', '', array('class' => 'form-control warlock-left','placeholder' => 'UNIVERSITY/COMPANY'))}}
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 					<br>
-					{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'MAJOR/POSITION'))}}
+					{{Form::text('position', '', array('class' => 'form-control warlock-left','placeholder' => 'MAJOR/POSITION'))}}
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 					
 				</div>
 				
 			</div>
 			<div class="col-md-4">
-				{{Form::textarea('fathername', '', array('class' => 'form-control','placeholder' => 'BIO', 'rows' => 9, 'cols' => 40))}}
-				<span class="warlock-error">{{$errors->login->first('fathername')}}</span>
+				{{Form::textarea('bio', '', array('class' => 'form-control','placeholder' => 'BIO', 'rows' => 9, 'cols' => 40))}}
+				<span class="warlock-error">{{$errors->login->first('bio')}}</span>
 				
 			</div>
 			<div class="col-md-3">
@@ -829,7 +829,7 @@
 			<div class="col-md-4">
 			<div class="input-prepend">
 				<span class="add-on"><i class="fa fa-twitter"></i></span>
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						{{Form::text('twitter', '', array('class' => 'form-control warlock-left','placeholder' => 'TWITTER PROFILE LINK'))}}
 			</div>
 			
 						
@@ -839,7 +839,7 @@
 			<div class="col-md-4">
 				<div class="input-prepend">
 				<span class="add-on"><i class="fa fa-linkedin"></i></span>
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						{{Form::text('linkedin', '', array('class' => 'form-control warlock-left','placeholder' => 'LINKEDIN PROFILE LINK'))}}
 			</div>
 			
 						
@@ -849,7 +849,7 @@
 			<div class="col-md-4">
 				<div class="input-prepend">
 				<span class="add-on"><i class="fa fa-youtube-play"></i></span>
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						{{Form::text('youtube', '', array('class' => 'form-control warlock-left','placeholder' => 'YOUTUBE CHANNEL LINK'))}}
 			</div>
 			
 						
@@ -863,7 +863,7 @@
 			<div class="col-md-4">
 				<div class="input-prepend">
 				<span class="add-on"><i class="fa fa-github"></i></span>
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						{{Form::text('github', '', array('class' => 'form-control warlock-left','placeholder' => 'GITHUB PROFILE LINK'))}}
 			</div>
 			
 						
@@ -873,7 +873,7 @@
 			<div class="col-md-4">
 				<div class="input-prepend">
 				<span class="add-on"><i class="fa fa-behance"></i></span>
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						{{Form::text('behance', '', array('class' => 'form-control warlock-left','placeholder' => 'BEHANCE PROFILE LINK'))}}
 			</div>
 			
 						
@@ -883,7 +883,7 @@
 			<div class="col-md-4">
 				<div class="input-prepend">
 				<span class="add-on"><i class="fa fa-graduation-cap"></i></span>
-						{{Form::text('firstname', '', array('class' => 'form-control warlock-left','placeholder' => 'FULL NAME'))}}
+						{{Form::text('academia', '', array('class' => 'form-control warlock-left','placeholder' => 'ACADEMIA PROFILE LINK'))}}
 			</div>
 			
 						
