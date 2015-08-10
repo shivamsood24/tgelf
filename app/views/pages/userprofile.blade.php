@@ -11,12 +11,13 @@
         <div class="col-md-5" >
             <h1><span style="color:#c6c6c6">{{ $username->firstname }}</span><span class="profile_head"> {{ $username->lastname }}</span></h1>
             <hr>
-            <h3 class="profile_head desig">{{$username->userprofiles->universitycompany}},{{$username->userprofiles->majorposition}}</h3>
+            <h3 class="profile_head">{{$username->userprofiles->universitycompany}} | {{$username->userprofiles->majorposition}}</h3>
             <h3 class="desig"><span style="color:#c6c6c6">{{$username->useraddress->state}}</span>,<span style="color:#808080">{{$username->useraddress->country}}</span></h3>    
 
         </div>
         <div class="col-md-3">
-            <div id="circle">
+            <div id="">
+            <img src="{{asset('uploads/'.$username->useraddress->country)}}.png" alt="" style="width: 99%;">
              </div>
         </div>
 
