@@ -351,7 +351,7 @@ body.fixed-filter #static-content {
 		}		
 		
 		.box:not(.red-hover):not(.job-box) .box-article:after {
-			background: #343741;			
+			background:rgba(168, 51, 52, 0.57);			
 		}
 		.box.red-hover .box-article:after {
 			background: rgba(218, 41, 28, .9);			
