@@ -15,7 +15,24 @@ class IndexController extends BaseController {
 
 	}
 
-
+public function events()
+	{
+			//
+		$title = "TGelf - Events";
+		return View::make('pages.events',array('title'=> $title));
+	}
+	public function aboutus()
+	{
+			//
+		$title = "TGelf - About Us";
+		return View::make('pages.aboutus',array('title'=> $title));
+	}
+	public function program()
+	{
+			//
+		$title = "TGelf - Program";
+		return View::make('pages.program',array('title'=> $title));
+	}
 
 	/**
 	 * Show the form for creating a new resource.
