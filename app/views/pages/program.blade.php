@@ -69,54 +69,25 @@
                 learning. With one week will be devoted to internal training, while the second will focus 
                 on external leadership. The remaining 4 weeks will involve working with the foundation."</p>
                 <br>
-                <div class="section-content">
-                <div class="grid absolute-nav">
-                    <div class="grid-slider" style="transform: translate3d(0%, 0px, 0px);">
-    
-
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
-                            <article class="box-article">
-                            <p class="article-title">INTERNSHIPS</p>
-                                  
-                            </article>
-                        </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
-                            <article class="box-article">
-                            <p class="article-title">RESEARCH</p>
-                                  
-                            </article>
-                        </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
-                            <article class="box-article">
-                            <p class="article-title">COLLABORATIVE PROJECTS</p>
-                                  
-                            </article>
-                        </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
-                            <article class="box-article">
-                            <p class="article-title">CONFERENCE GRANTS</p>
-                                  
-                            </article>
-                        </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
-                            <article class="box-article">
-                            <p class="article-title">INTERNATIONAL EVENTS</p>
-                                  
-                            </article>
-                        </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
-                            <article class="box-article">
-                            <p class="article-title">SEED FUNDING</p>
-                                  
-                            </article>
-                        </div>
-
-        
-                    </div>
-               
-                
-            </div>
-            </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
+              </div>  
         </fieldset>
         <fieldset class="f3" style="display:none">
             <div class="row">
