@@ -43,8 +43,12 @@
             <p class="programp">"A week long outward bound trip, focussing on service, and also
                 on bonding within the new batch of the leaders forum members."</p>
                 <br>
-                
-
+                <div class="col-md-4">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
             </div>
         </fieldset>
         <fieldset class="f2" style="display:none">
@@ -54,7 +58,24 @@
                 learning. With one week will be devoted to internal training, while the second will focus 
                 on external leadership. The remaining 4 weeks will involve working with the foundation."</p>
                 <br>
-                
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 85%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 85%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 85%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 85%;">
+                </div>
+                 <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 85%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 85%;">
+                </div>
             </div>
         </fieldset>
         <fieldset class="f3" style="display:none">
@@ -63,7 +84,12 @@
                <p class="programp">"tGELF helps the members of the leaders forum in getting internship 
                 opportunities in their areas of interest, through a structured and a regulated process."</p>
                 <br>
-                
+                <div class="col-md-4">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                </div>
             </div>
         </fieldset>
         <fieldset class="f4" style="display:none">
