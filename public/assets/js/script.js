@@ -52,13 +52,13 @@ $('#codecheck').keyup(function(){
 		"/checkcode",
 		{codecheck : $(this).val()},
 		function(data){
-			//console.log(data);
-			if (data == "true") {
+			console.log(data);
+			if (data === "true") {
 				$('.next1').attr('disabled', true);
 				$("#usernameerror").css("color","#a83334");
 				$("#codeerror").html("Code is already used!!");
 			}
-			else if(data == "false"){
+			else if(data = "false"){
 				$('.next1').attr('disabled', true);
 				$("#usernameerror").css("color","#a83334");
 				$("#codeerror").html("Code is invalid!!");
