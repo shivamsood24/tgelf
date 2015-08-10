@@ -50,12 +50,13 @@
                 <a href="#" title="Close" class="close-nav">Close</a>
                 <div class="list-wrapper">
                     <ul>
-                        <li><a href="index" title="Home">Home</a></li>
-                        <li><a href="aboutus" title="Fellows">About Us</a></li>
-                        <li><a href="events" title="K50">Events</a></li>
-                        <li><a href="program" title="K Labs">Program</a></li>
-                        <li><a href="leader" title="Partners">Leaders</a></li>
-                        <li><a href="login" title="Case studies">Login</a></li>
+                        <li>{{ HTML::link('/index', 'Home')}}</li>
+                        <li>{{ HTML::link('/aboutus', 'About Us')}}</li>
+                        <li>{{ HTML::link('/events', 'Events')}}</li>
+                        <li>{{ HTML::link('/program', 'Program')}}</li>
+                        <li>{{ HTML::link('/showleaders', 'Leaders')}}</li>
+                        <li>{{ HTML::link('/login', 'Login')}}</li>
+                        <li>{{ HTML::link('/register', 'Register')}}</li>
                         
                     </ul>
                     
