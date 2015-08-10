@@ -39,6 +39,7 @@ class LoginController extends BaseController {
         	$password = Input::get('password');
 
         	// //var_dump(Input::all());
+        	
         	// ($credentials));
 			if (Auth::attempt($credentials))
 		{

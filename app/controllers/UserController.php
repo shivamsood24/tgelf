@@ -119,10 +119,10 @@ class UserController extends BaseController
 			  }
 			  DB::table('user_addresses')->insert(array('user_id' => $id,'ispresent' => '1','addressline1' => $caddressline1,'addressline2' => $caddressline2,'city' => $ccity,'state' => $cstate,'country' => $ccountry,'pincode' => $ccode));
 			  DB::table('user_addresses')->insert(array('user_id' => $id,'ispresent' => '0','addressline1' => $paddressline1,'addressline2' => $paddressline2,'city' => $pcity,'state' => $pstate,'country' => $pcountry,'pincode' => $pcode));
-			  DB::table('userinterests')->insert(array('user_id' => $id,'isprimary' => '1','name' => $key_skill));
-			  DB::table('userinterests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest1));
-			  DB::table('userinterests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest2));
-			  DB::table('userinterests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest3));
+			  DB::table('user_interests')->insert(array('user_id' => $id,'isprimary' => '1','name' => $key_skill));
+			  DB::table('user_interests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest1));
+			  DB::table('user_interests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest2));
+			  DB::table('user_interests')->insert(array('user_id' => $id,'isprimary' => '0','name' => $key_interest3));
 			  DB::table('social_links')->insert(array('user_id' => $id,'twitter' => $twitter,'linkedin' => $linkedin,'youtube' => $youtube,'github' => $github,'academia' => $academia,'behance' => $behance));
 
 			return Redirect::to('/profile/'.$username);
