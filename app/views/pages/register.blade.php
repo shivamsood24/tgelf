@@ -46,7 +46,7 @@
 				<br>
 				<div>
 					<div class="col-md-4 warlock-clear">
-						{{Form::select('countrycode',array('7' => '+7',
+						{{Form::select('countrycode',array('91' => '+91',
 							'7' => '+7',
 							'20' => '+20',
 							'27' => '+27',
@@ -86,7 +86,6 @@
 							'84' => '+84',
 							'86' => '+86',
 							'90' => '+90',
-							'91' => '+91',
 							'92' => '+92',
 							'93' => '+93',
 							'94' => '+94',
@@ -274,7 +273,7 @@
 				<br>
 				<div>
 					<div class="col-md-4 warlock-clear">
-						{{Form::select('countrycodefather',array('7' => '+7',
+						{{Form::select('countrycodefather',array('91' => '+91',
 							'7' => '+7',
 							'20' => '+20',
 							'27' => '+27',
@@ -314,7 +313,6 @@
 							'84' => '+84',
 							'86' => '+86',
 							'90' => '+90',
-							'91' => '+91',
 							'92' => '+92',
 							'93' => '+93',
 							'94' => '+94',
@@ -500,7 +498,7 @@
 					<br>
 					<div>
 						<div class="col-md-4 warlock-clear">
-							{{Form::select('countrycodemother',array('7' => '+7',
+							{{Form::select('countrycodemother',array('91' => '+91',
 							'7' => '+7',
 							'20' => '+20',
 							'27' => '+27',
@@ -540,7 +538,6 @@
 							'84' => '+84',
 							'86' => '+86',
 							'90' => '+90',
-							'91' => '+91',
 							'92' => '+92',
 							'93' => '+93',
 							'94' => '+94',
