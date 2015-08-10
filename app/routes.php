@@ -11,21 +11,33 @@
 |
 */
 
+//IndexController Routes
 Route::get('/', 'IndexController@index');
+Route::get('/events','IndexController@events');
+Route::get('/aboutus','IndexController@aboutus');
+Route::get('/program','IndexController@program');
+
+//LoginController Routes
 Route::get('/login', 'LoginController@index');
 Route::post('/login','LoginController@login');
+
+//UserControllerRoutes
 Route::get('/register','UserController@index');
 Route::post('/checkusername','UserController@checkusername');
 Route::post('/checkcode','UserController@checkcode');
 Route::get('/profile/{username}','UserController@profile');
-Route::get('/temp','ProfileController@temp');
 Route::get('createuser','UserController@index');
 Route::post('createuser','UserController@createuser');
+
+//ProfileController Routes
+Route::get('/temp','ProfileController@temp');
+
+//WorldController Routes
 Route::get('/showleaders','WorldController@index');
 Route::get('/world', 'WorldController@world');
-Route::get('/events','IndexController@events');
-Route::get('/aboutus','IndexController@aboutus');
-Route::get('/program','IndexController@program');
+
+
+//Temp Routes
 Route::get('success',function(){
 	return "Success";
 });
