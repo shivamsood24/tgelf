@@ -50,33 +50,20 @@
                 <a href="#" title="Close" class="close-nav">Close</a>
                 <div class="list-wrapper">
                     <ul>
-                        <li><a href="index.html" title="Home">Home</a></li>
-                        <li><a href="fellows.html" title="Fellows" class="active">Fellows</a></li>
-                        <li><a href="k50.html" title="K50">K50</a></li>
-                        <li><a href="klabs.html" title="K Labs">KLabs</a></li>
-                        <li><a href="partners.html" title="Partners">Partners</a></li>
-                        <li><a href="case-studies.html" title="Case studies">Case Studies</a></li>
-                        <li><a href="blog.html" title="Blog">Blog</a></li>
-                        <li><a href="events.html" title="Events">Events</a></li>
-                        <li><a href="about.html" title="About">About</a></li>
-                        <li><a href="get-involved.html" title="Get Involved">Get Involved</a></li>
-                        <li><a href="jobs.html" title="Jobs">Jobs</a></li>
+                        <li><a href="index" title="Home">Home</a></li>
+                        <li><a href="aboutus" title="Fellows">About Us</a></li>
+                        <li><a href="events" title="K50">Events</a></li>
+                        <li><a href="program" title="K Labs">Program</a></li>
+                        <li><a href="leader" title="Partners">Leaders</a></li>
+                        <li><a href="login" title="Case studies">Login</a></li>
+                        
                     </ul>
-                    <a href="about.html#newsletter" title="Sign up for newsletter" class="button dark-blue">Sign up for newsletter</a>
+                    
                 </div>              
             </div>              
         </nav>
 
-        <div id="main-search">
-            <div class="content-wrapper">
-                <a href="#" title="Close" class="close-search">Close</a>
-                <form action="http://kairossociety.com/ajax/search" method="get" class="search-form">
-                    <input type="text" class="search-input" value="" tabindex="-1" />
-                    <div class="search-input-placeholder">Search ...</div>
-                    <button type="button" class="search-submit">Search</button>
-                </form>
-            </div>              
-        </div>
+        
 
 
     @yield('content')
