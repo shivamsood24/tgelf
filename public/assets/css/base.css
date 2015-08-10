@@ -192,7 +192,7 @@ body.will-toggle-announcement #announcement {
 	z-index: 100;
 	overflow: hidden;
 	text-align: center;
-	background: rgba(255, 255, 255, .95);
+	background: #fff;
 	-webkit-transition: opacity .3s ease-out;
 	-moz-transition: opacity .3s ease-out;
 	-ms-transition: opacity .3s ease-out;
@@ -209,7 +209,7 @@ body.will-toggle-announcement #announcement {
 	right: 0;
 	margin: auto;
 	
-	background-image: url('../images/sprite.png');
+	background-image: url('{{asset('uploads/mega_menu_logo.png')}}');
 	background-repeat: no-repeat;
 }
 #main-nav .content-wrapper {

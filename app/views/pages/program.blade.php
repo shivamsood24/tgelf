@@ -1,6 +1,17 @@
  @extends('layouts.master')
  @section('content')
- <div class="container login-container"  style="margin-bottom: 10%;">
+<style>
+.box
+{
+    background-color: #A83334; 
+}
+.box:not(.job-box) .box-article {
+    padding: 112px 32px 35px 32px;
+    text-align: center;
+    color: #fff;
+    }
+</style>
+  <div class="container login-container"  style="margin-bottom: 10%;">
     <h1 id="war-header" style="text-align: center;margin-bottom: 1px !important;"><span id="war-header-inner">PROGRAM</span></h1>
     <br>
     <br>
@@ -63,39 +74,39 @@
                     <div class="grid-slider" style="transform: translate3d(0%, 0px, 0px);">
     
 
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="background-image: url(http://kairossociety.com/uploads/blog/_720_540/c2_montreal.png);border-radius: 148px;">
+                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
                             <article class="box-article">
-                            <h3 class="article-title">K50 ‘14 DigitalGenius Wins Milken Pitch Competition</h3>
+                            <p class="article-title">INTERNSHIPS</p>
                                   
                             </article>
                         </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="background-image: url(http://kairossociety.com/uploads/blog/_720_540/c2_montreal.png);border-radius: 148px;">
+                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
                             <article class="box-article">
-                            <h3 class="article-title">K50 ‘14 DigitalGenius Wins Milken Pitch Competition</h3>
+                            <p class="article-title">RESEARCH</p>
                                   
                             </article>
                         </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="background-image: url(http://kairossociety.com/uploads/blog/_720_540/c2_montreal.png);border-radius: 148px;">
+                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
                             <article class="box-article">
-                            <h3 class="article-title">K50 ‘14 DigitalGenius Wins Milken Pitch Competition</h3>
+                            <p class="article-title">COLLABORATIVE PROJECTS</p>
                                   
                             </article>
                         </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="background-image: url(http://kairossociety.com/uploads/blog/_720_540/c2_montreal.png);border-radius: 148px;">
+                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
                             <article class="box-article">
-                            <h3 class="article-title">K50 ‘14 DigitalGenius Wins Milken Pitch Competition</h3>
+                            <p class="article-title">CONFERENCE GRANTS</p>
                                   
                             </article>
                         </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="background-image: url(http://kairossociety.com/uploads/blog/_720_540/c2_montreal.png);border-radius: 148px;">
+                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
                             <article class="box-article">
-                            <h3 class="article-title">K50 ‘14 DigitalGenius Wins Milken Pitch Competition</h3>
+                            <p class="article-title">INTERNATIONAL EVENTS</p>
                                   
                             </article>
                         </div>
-                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="background-image: url(http://kairossociety.com/uploads/blog/_720_540/c2_montreal.png);border-radius: 148px;">
+                        <div class="box quarter-box solid-bg grid-slide col-md-2" style="border-radius: 148px;">
                             <article class="box-article">
-                            <h3 class="article-title">K50 ‘14 DigitalGenius Wins Milken Pitch Competition</h3>
+                            <p class="article-title">SEED FUNDING</p>
                                   
                             </article>
                         </div>
