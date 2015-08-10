@@ -119,8 +119,14 @@ class UserController extends BaseController
 			      $fileName = rand(11111,99999).'.'.$extension; // renameing image
 			      Input::file('image')->move($destinationPath, $fileName);
 			      DB::table('userprofiles')->insert(array('user_id' => $results->id,'countrycode' => $countrycode,'contactno' => $contactno,'personalemail' => $personalemail,'professionalemail' => $professionalemail,'bio' => $bio,'fathername' => $fathername,'mothername' => $mothername,'photo' => $destinationPath.'/'.$fileName,'universitycompany' => $company,'majorposition' => $position,'funfact' => $funfact,'countrycodefather' => $countrycodefather,'contactnofather' => $contactnofather,'countrycodemother' => $countrycodemother,'contactnomother' => $contactnomother));
-			      
+
 			  }
+			  DB::table('user_addresses')->insert(array('user_id' => $results->id,'ispresent' => '1','addressline1' => $caddressline1,'addressline2' => $caddressline2,'city' => $ccity,'state' => $cstate,'country' => $ccountry,'pincode' => $ccode));
+			  DB::table('user_addresses')->insert(array('user_id' => $results->id,'ispresent' => '0','addressline1' => $paddressline1,'addressline2' => $paddressline2,'city' => $pcity,'state' => $pstate,'country' => $pcountry,'pincode' => $pcode));
+			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '1','name' => $key_skill));
+			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest1));
+			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest2));
+			  DB::table('userinterests')->insert(array('user_id' => $results->id,'isprimary' => '0','name' => $key_interest3));
 
 			});
 		}
