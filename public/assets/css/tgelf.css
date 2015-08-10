@@ -100,3 +100,16 @@
    font-size: 0;
    white-space: nowrap;
 }
+
+.profile_head
+{
+        color: #A83334;
+}
+.desig
+{
+        margin-top: 0px !important;
+}
+.big
+{
+    font-size: 200px !important;
+}

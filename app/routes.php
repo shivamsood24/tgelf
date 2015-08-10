@@ -26,6 +26,7 @@ Route::get('createuser','UserController@index');
 Route::post('createuser','UserController@createuser');
 Route::get('/showleaders','WorldController@index');
 Route::get('/events','EventsController@index');
+Route::get('/aboutus','AboutusController@index');
 Route::get('success',function(){
 	return "Success";
 });

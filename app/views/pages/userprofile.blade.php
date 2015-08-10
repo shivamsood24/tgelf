@@ -3,15 +3,15 @@
 
  <div class="container login-container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div  id="circle"> </div>
 
         </div>
-        <div class="col-md-5">
-            <h1>{{ $username->username }}</h1>
+        <div class="col-md-5" >
+            <h1><span style="color:#c6c6c6">{{ $username->firstname }}</span><span class="profile_head"> {{ $username->lastname }}</span></h1>
             <hr>
-            <h3>{{$username->userprofiles->universitycompany}},{{$username->userprofiles->majorposition}}</h3>
-            <h3>{{$username->useraddress->state}},{{$username->useraddress->country}}</h3>    
+            <h3 class="profile_head desig">{{$username->userprofiles->universitycompany}},{{$username->userprofiles->majorposition}}</h3>
+            <h3 class="desig"><span style="color:#c6c6c6">{{$username->useraddress->state}}</span>,<span style="color:#808080">{{$username->useraddress->country}}</span></h3>    
 
         </div>
         <div class="col-md-3">
@@ -20,27 +20,18 @@
 
     </div>
     <br>
+    <br>
     <div class="row">
-        <div class="col-md-4">
-            <h3>AREAS OF INTEREST</h3>
-            <a href="#" ><img src="{{asset('uploads/line.png')}}" style="width:100%;"></a>
-            @foreach ($username->userinterests as $user)
-            @if ($user->isprimary == 0)
-            <div>
-            <a href="#" class="soclicon">{{$user->name}}</a>
-            </div>
-            @endif
-            @endforeach
-        </div>
-        <div class="col-md-5" style="border-right: 1px #A83334 solid;border-left: 1px #A83334 solid;">
+        
+        <div class="col-md-7" style="border-right: 1px #A83334 solid;">
 
-            <h3 style="text-align: center">BIO</h3>
+            <h3>BIO</h3>
 
-            <p style="text-align:center" class="profilep">{{$username->userprofiles->bio}}</p>
+            <p class="profilep">{{$username->userprofiles->bio}}</p>
 
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-5" style="text-align: center;">
             <p class="profilep">"{{$username->userprofiles->funfact}}"</p>
             <div style="margin-top: 10%;">
                 <a href="{{$username->sociallinks->twitter}}" class="soclicon" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -55,6 +46,22 @@
             
         </div>
 
+    </div>
+    <br>
+    <div class="row">
+    <div class="col-md-12">
+    <h2 style="text-align: center;color: #D0CECE;">AREAS OF INTEREST</h2>
+     <a href="#" ><img src="{{asset('uploads/line.png')}}" style="width:100%;"></a>
+      <div>
+                @foreach ($username->userinterests as $user)
+            @if ($user->isprimary == 0)
+            <div class="col-md-4" style="text-align: center;">
+            <a href="#" class="soclicon">{{$user->name}}</a>
+            </div>
+            @endif
+            @endforeach
+                </div>
+    </div>
     </div>
 </div>
 @stop
