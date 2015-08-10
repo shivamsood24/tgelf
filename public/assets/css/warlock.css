@@ -38,6 +38,10 @@
     white-space: nowrap;
 	}
 
+	#warlock-upload{
+		    padding: 10px;
+	}
+
 	.add-on{
 	display: flex;
     width: auto;
