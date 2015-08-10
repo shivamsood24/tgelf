@@ -111,22 +111,22 @@ function checkcode(){
 		function(data){
 			//console.log(data);
 			if (data == "true") {
-				// $('.next1').attr('disabled', true);
-				// $("#usernameerror").css("color","#a83334");
-				// $("#codeerror").html("Code is already used!!");
+				$('.next1').attr('disabled', true);
+				$("#usernameerror").css("color","#a83334");
+				$("#codeerror").html("Code is already used!!");
 				return "false";
 			}
 			else if(data == "false"){
-				// $('.next1').attr('disabled', true);
-				// $("#usernameerror").css("color","#a83334");
-				// $("#codeerror").html("Code is invalid!!");
+				$('.next1').attr('disabled', true);
+				$("#usernameerror").css("color","#a83334");
+				$("#codeerror").html("Code is invalid!!");
 				return "false";
 			}
 			else
 			{
-				// $('.next1').attr('disabled', false);
-				// $("#codeerror").css("color","green");
-				// $("#codeerror").html("Code is Valid");
+				$('.next1').attr('disabled', false);
+				$("#codeerror").css("color","green");
+				$("#codeerror").html("Code is Valid");
 				return "true";
 			}
 		});
