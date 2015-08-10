@@ -11,9 +11,6 @@
 |
 */
 
-
-Route::get('/signup', 'ProfileController@index');
-Route::post('/signup', 'ProfileController@checkval');
 Route::get('/', 'IndexController@index');
 Route::get('/login', 'LoginController@index');
 Route::post('/login','LoginController@login');
@@ -25,9 +22,10 @@ Route::get('/temp','ProfileController@temp');
 Route::get('createuser','UserController@index');
 Route::post('createuser','UserController@createuser');
 Route::get('/showleaders','WorldController@index');
-Route::get('/events','EventsController@index');
-Route::get('/aboutus','AboutusController@index');
-Route::get('/program','ProgramController@index');
+Route::get('/world', 'WorldController@world');
+Route::get('/events','IndexController@events');
+Route::get('/aboutus','IndexController@aboutus');
+Route::get('/program','IndexController@program');
 Route::get('success',function(){
 	return "Success";
 });
