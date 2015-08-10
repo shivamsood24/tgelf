@@ -896,7 +896,7 @@
 				<div class="row">
 		<p>AREAS OF INTEREST</p>
 			<div class="col-md-4">
-					{{ Form::select('key_skill', array('' => 'Select Your Area Of Interest',
+					{{ Form::select('key_interest1', array('' => 'Select Your Area Of Interest',
 							'Humanitarian and social sector' => 'Humanitarian and social sector',
 							'Visual and Performing Arts' => 'Visual and Performing Arts',
 							' Economics, Business and Entrepreneurship' => 'Economics, Business and Entrepreneurship',
@@ -919,7 +919,7 @@
 					<span class="warlock-error">{{$errors->login->first('firstname')}}</span>
 			</div>
 			<div class="col-md-4">
-				{{ Form::select('key_skill', array('' => 'Select Your Area Of Interest',
+				{{ Form::select('key_interest2', array('' => 'Select Your Area Of Interest',
 							'Humanitarian and social sector' => 'Humanitarian and social sector',
 							'Visual and Performing Arts' => 'Visual and Performing Arts',
 							' Economics, Business and Entrepreneurship' => 'Economics, Business and Entrepreneurship',
@@ -943,7 +943,7 @@
 				
 			</div>
 			<div class="col-md-4">
-				{{ Form::select('key_skill', array('' => 'Select Your Area Of Interest',
+				{{ Form::select('key_interest3', array('' => 'Select Your Area Of Interest',
 							'Humanitarian and social sector' => 'Humanitarian and social sector',
 							'Visual and Performing Arts' => 'Visual and Performing Arts',
 							' Economics, Business and Entrepreneurship' => 'Economics, Business and Entrepreneurship',
