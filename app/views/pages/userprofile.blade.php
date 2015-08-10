@@ -18,6 +18,8 @@
         <div class="col-md-3">
             <div id="">
             <img src="{{asset('uploads/'.$username->useraddress->country)}}.png" alt="" style="width: 99%;">
+            <br>
+<h3 class="desig"  style="text-align: center"><span class="profile_head">{{$username->useraddress->country}}</span></h3>    
              </div>
         </div>
 
