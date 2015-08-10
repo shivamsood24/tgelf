@@ -25,6 +25,7 @@ Route::get('/temp','ProfileController@temp');
 Route::get('createuser','UserController@index');
 Route::post('createuser','UserController@createuser');
 Route::get('/showleaders','WorldController@index');
+Route::get('/events','EventsController@index');
 Route::get('success',function(){
 	return "Success";
 });
