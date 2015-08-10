@@ -20,10 +20,11 @@
 			{{ Form::password('confirmpassword', array('class' => 'form-control','id'=> 'confirmpassword','placeholder' => 'CONFIRM PASSWORD'))}}
 			<span class="warlock-error" id="passworderror">{{$errors->login->first('confirmpassword')}}</span>
 			<br>
+			<div></div>
 			{{Form::text('uniquecode', '', array('class' => 'form-control','id'=> 'codecheck','placeholder' => 'VERIFICATION CODE'))}}
 			<span class="warlock-error" id="codeerror">{{$errors->login->first('uniquecode')}}</span>
 			<br>
-			{{ Form::button('GET STARTED', array('class' => 'btn btn-default login-btn next1 last-btn','data-val'=> '1'))}}
+			{{ Form::button('GET STARTED', array('class' => 'btn btn-default login-btn next1 last-btn','data-val'=> '1','disabled','true'))}}
 		</div>
 	</fieldset>
 	<fieldset class="f2">

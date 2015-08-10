@@ -1,34 +1,11 @@
 $('.next1').click(function(){
-	// var pass = $('#password').val();
-	// var cpass = $('#confirmpassword').val()
-	var checkc = checkcode();
-	console.log(checkc);
-		if (checkc == "true"){
 			$('.l1').removeClass('active');
 			$('.l2').addClass('active');
 			$('.f1').hide("fade");
 			$('.f2').show("fade");
-	
-}
-else
-{
-	var codecheck = $(this).val();
-	if(codecheck.length > 0){
-	$("#usernameerror").css("color","#a83334");
-	$("#codeerror").html("Code is invalid!!");
-	}
-	else{
-		$("#usernameerror").css("color","#a83334");
-	$("#codeerror").html("Please enter the code!!");
-	}
-
-}
-
-	//$('#warlock-loader').hide();
-	
-	
-
 });
+
+
 $('.next2').click(function(){
 	$('.l2').removeClass('active');
 	$('.l3').addClass('active');
@@ -66,7 +43,7 @@ else
 }
 });
 
-$('#codecheck').change(function(){
+$('#codecheck').keyup(function(){
 	//console.log("shots fired");
 	//console.log($(this).val());
 	var codecheck = $(this).val();
