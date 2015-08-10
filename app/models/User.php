@@ -16,6 +16,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 	protected $fillable = ['username','password'];
+	public $timestamps = false;
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -40,5 +41,20 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->hasOne('SocialLinks');
 	}
+
+	public function getRememberToken()
+{
+    return $this->remember_token;
+}
+
+public function setRememberToken($value)
+{
+    $this->remember_token = $value;
+}
+
+public function getRememberTokenName()
+{
+    return 'remember_token';
+}
 
 }

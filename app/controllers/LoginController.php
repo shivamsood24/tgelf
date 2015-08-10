@@ -9,6 +9,11 @@ class LoginController extends BaseController {
 	 */
 	public function index()
 	{
+		if(Session::has('username'))
+		{
+			$value = Session::get('username');
+			return Redirect::to('profile/'.$value);
+		}
 		$title = "TGelf - Login Page";
 		return View::make('pages.login',array('title'=> $title));
 	}
@@ -21,13 +26,14 @@ class LoginController extends BaseController {
 	 */
 	public function login()
 	{
+		
 		$credentials = [
 			'username' => Input::get('username'),
 			'password' => Input::get('password')
 			];
 		
 		$rules = [
-			'username' => 'required|alpha_num',
+			'username' => 'required|alpha',
 			'password' => 'required|alpha_num|between:5,20',
 		];
 
@@ -39,17 +45,16 @@ class LoginController extends BaseController {
         	$password = Input::get('password');
 
         	// //var_dump(Input::all());
-        	
         	// ($credentials));
 			if (Auth::attempt($credentials))
 		{
+			Session::put('username', $username);
+			//echo Session::get('username');
 		   return Redirect::to('profile/'.$username);
 		}
 		else
 		{
-			//return Redirect::to('login')->withErrors($validator,'login')->with('login_errors',true);
-			  return Redirect::back()->withInput()->with('message','Username/Password Incorrrect!!');
-
+			return Redirect::to('login')->withErrors($validator,'login')->withInput(Input::except('password'));
 		}
 			
 

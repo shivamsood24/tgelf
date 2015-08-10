@@ -36,6 +36,8 @@ Route::get('/temp','ProfileController@temp');
 Route::get('/showleaders','WorldController@index');
 Route::get('/world', 'WorldController@world');
 
+Route::get('/logout', 'IndexController@doLogout');
+
 
 //Temp Routes
 Route::get('success',function(){

@@ -55,9 +55,14 @@
                         <li>{{ HTML::link('/events', 'Events')}}</li>
                         <li>{{ HTML::link('/program', 'Program')}}</li>
                         <li>{{ HTML::link('/showleaders', 'Leaders')}}</li>
-                        <li>{{ HTML::link('/login', 'Login')}}</li>
+                      @if(Session::has('username'))
+                        <li><a href="{{ URL::to('logout') }}">Logout</a></li>
+                        @else 
+                           <li>{{ HTML::link('/login', 'Login')}}</li>
+                       
                         <li>{{ HTML::link('/register', 'Register')}}</li>
-                        
+                                                
+                        @endif
                     </ul>
                     
                 </div>              

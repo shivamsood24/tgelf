@@ -34,6 +34,13 @@ public function events()
 		return View::make('pages.program',array('title'=> $title));
 	}
 
+public function doLogout()
+{
+    Auth::logout(); // log the user out of our application
+    Session::flush();
+    return Redirect::to('login'); // redirect the user to the login screen
+}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
