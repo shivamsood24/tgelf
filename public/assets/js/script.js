@@ -66,7 +66,7 @@ else
 }
 });
 
-$('#codecheck').focusout(function(){
+$('#codecheck').change(function(){
 	//console.log("shots fired");
 	//console.log($(this).val());
 	var codecheck = $(this).val();
