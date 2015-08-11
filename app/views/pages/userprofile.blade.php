@@ -30,7 +30,7 @@
         
         <div class="col-md-7" style="border-right: 1px #A83334 solid;">
 
-            <h3 style="color: #C6C6C6;">BIO</h3>
+            <h3 style="color: #C6C6C6;margin-top: 0px;">BIO</h3>
 
             <p class="profilep">{{$username->userprofiles->bio}}</p>
 

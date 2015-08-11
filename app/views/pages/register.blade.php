@@ -1056,7 +1056,7 @@
 							'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
 				<span class="warlock-error">{{$errors->login->first('key_skill')}}</span>
 				<br>
-				{{ Form::textarea('funfact','', array('class' => 'form-control','placeholder' => 'FUN FACT', 'rows' => 5, 'cols' => 40))}}
+				{{ Form::textarea('funfact','', array('class' => 'form-control','placeholder' => 'Add your favorite quote', 'rows' => 5, 'cols' => 40))}}
 				<br>
 				<span class="warlock-error">{{$errors->login->first('funfact')}}</span>
 			</div>
