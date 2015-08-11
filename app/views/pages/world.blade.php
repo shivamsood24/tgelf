@@ -1,12 +1,11 @@
 @extends('layouts.master')
 @section('content')
-<!DOCTYPE html>
-<meta charset="utf-8">
 <style>
 
 svg {
   background-color: lavender;
   border: 1px solid black;
+  width: 100%;
 }
 
 path {
@@ -21,8 +20,8 @@ path {
     <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script>
 
-var width = 600,
-    height = 400,
+var width = 1900,
+    height = 600,
     rotate = 60,        // so that [-60, 0] becomes initial center of projection
     maxlat = 83;        // clip northern and southern poles (infinite in mercator)
     
@@ -63,7 +62,7 @@ var svg = d3.selectAll('body')
         .attr('height',height)
         .call(zoom);
 
-d3.json("world-50m.json", function ready(error, world) {
+d3.json("{{asset('assets/world-50m.json')}}", function ready(error, world) {
 
     svg.selectAll('path')
         .data(topojson.feature(world, world.objects.countries).features)
@@ -107,7 +106,8 @@ function redraw() {
     svg.selectAll('path')       // re-project path data
         .attr('d', path);
 }
-
-
 </script>
+<div id="map">
+	
+</div>
 @stop
