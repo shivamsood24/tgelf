@@ -175,4 +175,52 @@
 			}
 		}
 
+		public function fetchmap()
+		{
+			$result = DB::table('user_addresses')->get('country');
+			$fetch;
+			foreach ($result as $res)
+			{
+		
+		if ($res == 'china') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'usa') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'russia') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'england') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'germany') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'france') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'spain') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'japan') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'south korea') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'canada') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'australia') {
+			$fetch = array_add($fetch, '156', $res);
+		}
+		if ($res == 'india') {
+			$fetch = array_add($fetch, '356', $res);
+		}
+
+			}
+			return Response::json($fetch);
+		}
+
 	}

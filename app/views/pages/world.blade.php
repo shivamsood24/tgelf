@@ -66,23 +66,8 @@ d3.json("{{asset('assets/world-50m.json')}}", function ready(error, world) {
 
     svg.selectAll('path')
         .data(topojson.feature(world, world.objects.countries).features)
-      .enter().append('path').attr("id",function(d) { return d.id; }).attr("style",function(d) { 
-      	$.post( "ajax/test.html", function( data ) {
-  $( ".result" ).html( data );
-});
-       if(d.id == 356) return "fill:#a83334"; });
+      .enter().append('path').attr("id",function(d) { return d.id; }).attr("style",function(d) { if(d.id == 356) return "fill:#a83334"; });
 
-    //   .on("mouseover", function(d){
-    //   	 d3.selectAll($("#" + d.id))
-    // .style("fill", "#a83334")
-    // .style("stroke", "#666");
-    //   }).on("mouseout", function(d){
-    //   	d3.selectAll($("#" + d.id))
-    // .style("fill", "#808080")
-    // .style("stroke", "#666");
-    //   });
-   
-    
     redraw();       // update path data
 });
 

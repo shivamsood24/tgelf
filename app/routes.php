@@ -28,6 +28,7 @@ Route::post('/checkcode','UserController@checkcode');
 Route::get('/profile/{username}','UserController@profile');
 Route::get('createuser','UserController@index');
 Route::post('createuser','UserController@createuser');
+Route::get('/fetchmap', 'UserController@fetchmap');
 
 //ProfileController Routes
 Route::get('/temp','ProfileController@temp');
