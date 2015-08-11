@@ -54,11 +54,14 @@
             <p class="programp">"A week long outward bound trip, focussing on service, and also
                 on bonding within the new batch of the leaders forum members."</p>
                 <br>
-                <div class="col-md-4">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                <div class="col-md-2 col-md-offset-4">
+                    <img src="{{asset('uploads/outward-bound-trip.png')}}" style="width: 95%;">
                 </div>
-                <div class="col-md-4">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/service-projects.png')}}" style="width: 95%;">
+                </div>
+                <div class="col-md-offset-4">
+                  
                 </div>
             </div>
         </fieldset>
@@ -70,22 +73,22 @@
                 on external leadership. The remaining 4 weeks will involve working with the foundation."</p>
                 <br>
                 <div class="col-md-2">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                    <img src="{{asset('uploads/internship.png')}}" style="width: 95%;">
                 </div>
                 <div class="col-md-2">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                    <img src="{{asset('uploads/research-projects.png')}}" style="width: 95%;">
                 </div>
                 <div class="col-md-2">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                    <img src="{{asset('uploads/collaborative-projects.png')}}" style="width: 95%;">
                 </div>
                 <div class="col-md-2">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                    <img src="{{asset('uploads/conference.png')}}" style="width: 95%;">
                 </div>
                 <div class="col-md-2">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                    <img src="{{asset('uploads/international-events.png')}}" style="width: 95%;">
                 </div>
                 <div class="col-md-2">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                    <img src="{{asset('uploads/seed-funding.png')}}" style="width: 95%;">
                 </div>
               </div>  
         </fieldset>
@@ -95,11 +98,12 @@
                <p class="programp">"tGELF helps the members of the leaders forum in getting internship 
                 opportunities in their areas of interest, through a structured and a regulated process."</p>
                 <br>
-                <div class="col-md-4">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                
+                <div class="col-md-2 col-md-offset-4">
+                    <img src="{{asset('uploads/fellowship.png')}}" style="width: 95%;">
                 </div>
-                <div class="col-md-4">
-                    <img src="{{asset('uploads/program_file.png')}}" style="width: 58%;">
+                <div class="col-md-offset-4">
+                  
                 </div>
             </div>
         </fieldset>
@@ -110,7 +114,15 @@
                 students. This fellowship programme would be a 2 year long programme, which would 
                 involve ...."</p>
                 <br>
-                
+                <div class="col-md-2 col-md-offset-4">
+                    <img src="{{asset('uploads/mentorship.png')}}" style="width: 95%;">
+                </div>
+                <div class="col-md-2">
+                    <img src="{{asset('uploads/courses.png')}}" style="width: 95%;">
+                </div>
+                <div class="col-md-offset-4">
+                  
+                </div>
             </div>
         </fieldset>
     </div>

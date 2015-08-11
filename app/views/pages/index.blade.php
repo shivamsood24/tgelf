@@ -26,8 +26,8 @@
                 <div class="fill" style="background-image:url('{{asset('uploads/slider2.png')}}');"></div>
                <div class="carousel-caption">
                     <h2 class="sliderheader">THE LEADERS FORUM</h2>
-                    <p class="sliderheaderp">"Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has." </p>
-                    <p class="mig">-Margaret Mead-</p>
+                    <p class="sliderheaderp">"Our vision is strategic, our voice credible, our results are unmistakable and our impact global." </p>
+                    
                     <br>
                     <a href="#" title="Read more" class="button" style="text-shadow: none;">LEARN MORE</a>
                 </div>
