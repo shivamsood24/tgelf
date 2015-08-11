@@ -50,17 +50,19 @@ $('#codecheck').keyup(function(){
 	if(codecheck.length > 0){
 	$.post(
 		"/checkcode",
-		{codecheck : $(this).val()},
+		{
+			codecheck : $(this).val()
+		},
 		function(data){
 			console.log(data);
-			if (data === "true") {
+			if (data == 1) {
 				$('.next1').attr('disabled', true);
-				$("#usernameerror").css("color","#a83334");
+				$("#codeerror").css("color","#a83334");
 				$("#codeerror").html("Code is already used!!");
 			}
-			else if(data = "false"){
+			else if(data == 2){
 				$('.next1').attr('disabled', true);
-				$("#usernameerror").css("color","#a83334");
+				$("#codeerror").css("color","#a83334");
 				$("#codeerror").html("Code is invalid!!");
 			}
 			else
@@ -100,39 +102,3 @@ $('#confirmpassword').keyup(function(){
 
 });
 
-function checkcode(){
-	//console.log("shots fired");
-	//console.log($(this).val());
-	var codecheck = $(this).val();
-	if(codecheck.length > 0){
-	$.post(
-		"/checkcode",
-		{codecheck : $(this).val()},
-		function(data){
-			//console.log(data);
-			if (data == "true") {
-				$('.next1').attr('disabled', true);
-				$("#usernameerror").css("color","#a83334");
-				$("#codeerror").html("Code is already used!!");
-				return "false";
-			}
-			else if(data == "false"){
-				$('.next1').attr('disabled', true);
-				$("#usernameerror").css("color","#a83334");
-				$("#codeerror").html("Code is invalid!!");
-				return "false";
-			}
-			else
-			{
-				$('.next1').attr('disabled', false);
-				$("#codeerror").css("color","green");
-				$("#codeerror").html("Code is Valid");
-				return "true";
-			}
-		});
-}
-else
-{
-	$("#codeerror").html("");
-}
-}

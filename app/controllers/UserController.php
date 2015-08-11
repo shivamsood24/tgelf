@@ -167,17 +167,17 @@
 				$result = UniqueCode::where('code',$codecheck)->where('used',1)->first();
 			//return $result;
 				if ($result){
-				return "true"; //code is valid and used
+				return "1"; //code is valid and used
 			}
 			
 			else {
 				$result1 = UniqueCode::where('code',$codecheck)->first();
 				if($result1){
-					return "valid"; //code is valid
+					return "0"; //code is valid
 				}
 				else
 				{
-					return "false"; // code is invalid
+					return "2"; // code is invalid
 				}
 			}
 		}
