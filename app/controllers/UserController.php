@@ -90,10 +90,8 @@
 			'youtube' => 'required|url',
 			'github' => 'required|url',
 			'behance' => 'required|url',
-			'academia' => 'required|url',
-			'key_interest1' => 'required',
-			'key_interest2' => 'required',
-			'key_interest3' => 'required'
+			'academia' => 'required|url'
+			
 			];
 
 			$validator = Validator::make(Input::all(), $rules);
