@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-4 col-xs-6"> 
             <a href="#"  id="nav-trigger" ><img src="{{asset('uploads/menuicon.png')}}" style="width: 8%;float: right;margin-right: 5%;"></a>
-            <a href="#" ><img src="{{asset('uploads/map.png')}}" style="width:8%;float:right;"></a>
+            <a href="/world" ><img src="{{asset('uploads/map.png')}}" style="width:8%;float:right;"></a>
            
             
             </div>
