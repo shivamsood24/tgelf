@@ -3,13 +3,13 @@
 <style>
 
 svg {
-  background-color: lavender;
+  background-color: #c6c6c6;
   border: 1px solid black;
   width: 100%;
 }
 
 path {
-  fill: oldlace;
+  fill: #808080;
   stroke: #666;
   stroke-width: .5px;
 }
@@ -66,7 +66,22 @@ d3.json("{{asset('assets/world-50m.json')}}", function ready(error, world) {
 
     svg.selectAll('path')
         .data(topojson.feature(world, world.objects.countries).features)
-      .enter().append('path').attr("id",function(d) { return d.id; });
+      .enter().append('path').attr("id",function(d) { return d.id; }).attr("style",function(d) { 
+      	$.post( "ajax/test.html", function( data ) {
+  $( ".result" ).html( data );
+});
+       if(d.id == 356) return "fill:#a83334"; });
+
+    //   .on("mouseover", function(d){
+    //   	 d3.selectAll($("#" + d.id))
+    // .style("fill", "#a83334")
+    // .style("stroke", "#666");
+    //   }).on("mouseout", function(d){
+    //   	d3.selectAll($("#" + d.id))
+    // .style("fill", "#808080")
+    // .style("stroke", "#666");
+    //   });
+   
     
     redraw();       // update path data
 });
@@ -106,8 +121,35 @@ function redraw() {
     svg.selectAll('path')   // re-project path data
         .attr('d', path);
 }
+var countries = {
+		'156' : 'china',
+		'643' : 'russia',
+		'840' : 'usa',
+		'826' : 'england',
+		'276' : 'germany',
+		'250' : 'france',
+		'724' : 'spain',
+		'392' : 'japan',
+		'410' : 'south korea',
+		'124' : 'canada',
+		'36' : 'australia'
+	}
+
+	for (var key in countries) {
+   var val = countries[key];
+   console.log(key);
+   var new_key = "#"+key;
+    //Now you have your key and value which you 
+    //can add to a collection that your plugin uses
+  	$("#356").css("fill","#a83334");
+  	}
 </script>
 <div id="map">
 	
 </div>
+<script>
+	$("#356").hover(function(){
+		console.log("shots fired");
+	})
+</script>
 @stop
