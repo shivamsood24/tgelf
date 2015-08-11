@@ -66,7 +66,7 @@ d3.json("{{asset('assets/world-50m.json')}}", function ready(error, world) {
 
     svg.selectAll('path')
         .data(topojson.feature(world, world.objects.countries).features)
-      .enter().append('path')
+      .enter().append('path').attr("id",function(d) { return d.id; });
     
     redraw();       // update path data
 });
@@ -103,7 +103,7 @@ function redraw() {
         tlast = t;
     }
     
-    svg.selectAll('path')       // re-project path data
+    svg.selectAll('path')   // re-project path data
         .attr('d', path);
 }
 </script>
