@@ -34,7 +34,7 @@ class LoginController extends BaseController {
 		
 		$rules = [
 			'username' => 'required',
-			'password' => 'required|alpha_num|between:5,20',
+			'password' => 'required|alpha_num|between:4,20',
 		];
 
 		$validator = Validator::make(Input::all(), $rules);

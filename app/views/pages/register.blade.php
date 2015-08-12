@@ -47,7 +47,8 @@
 				<br>
 				<div>
 					<div class="col-md-4 warlock-clear">
-						{{Form::select('countrycode',array('91' => '+91',
+						{{Form::select('countrycode',array('' => 'Select Code',
+							'91' => '+91',
 							'7' => '+7',
 							'20' => '+20',
 							'27' => '+27',
@@ -274,7 +275,8 @@
 					<br>
 					<div>
 						<div class="col-md-4 warlock-clear">
-							{{Form::select('countrycodefather',array('91' => '+91',
+							{{Form::select('countrycodefather',array('' => 'Select Code',
+								'91' => '+91',
 								'7' => '+7',
 								'20' => '+20',
 								'27' => '+27',
@@ -499,7 +501,8 @@
 						<br>
 						<div>
 							<div class="col-md-4 warlock-clear">
-								{{Form::select('countrycodemother',array('91' => '+91',
+								{{Form::select('countrycodemother',array('' => 'Select Code',
+									'91' => '+91',
 									'7' => '+7',
 									'20' => '+20',
 									'27' => '+27',
@@ -1015,21 +1018,21 @@
 										</div>
 									</div>
 									<div class="col-md-9">
-										{{Form::file('image',array('class' => 'form-control','id' => 'warlock-upload' ))}}
-										<span class="warlock-error">{{$errors->login->first('image')}}</span>
+										{{Form::file('image',array('class' => 'form-control','id' => 'image','style' => '    padding: 10px;' ))}}
+										<span class="warlock-error" id="imageerror">{{$errors->login->first('image')}}</span>
 										<br>
 										{{Form::text('company', '', array('class' => 'form-control warlock-left','placeholder' => 'UNIVERSITY/COMPANY','id' => 'company'))}}
-										<span class="warlock-error">{{$errors->login->first('company')}}</span>
+										<span class="warlock-error" id="companyerror">{{$errors->login->first('company')}}</span>
 										<br>
-										{{Form::text('position', '', array('class' => 'form-control warlock-left','placeholder' => 'MAJOR/POSITION'))}}
-										<span class="warlock-error">{{$errors->login->first('position')}}</span>
+										{{Form::text('position', '', array('class' => 'form-control warlock-left','placeholder' => 'MAJOR/POSITION','id' => 'position'))}}
+										<span class="warlock-error" id="positionerror">{{$errors->login->first('position')}}</span>
 
 									</div>
 
 								</div>
 								<div class="col-md-4">
-									{{Form::textarea('bio', '', array('class' => 'form-control','placeholder' => 'BIO', 'rows' => 9, 'cols' => 40))}}
-									<span class="warlock-error">{{$errors->login->first('bio')}}</span>
+									{{Form::textarea('bio', '', array('class' => 'form-control','placeholder' => 'BIO', 'rows' => 9, 'cols' => 40,'id' => 'bio'))}}
+									<span class="warlock-error" id="bioerror">{{$errors->login->first('bio')}}</span>
 
 								</div>
 								<div class="col-md-3">
@@ -1050,15 +1053,15 @@
 										'Chemistry' => 'Chemistry',
 										'Physics' => 'Physics',
 										'Advertising & Journalism' => 'Advertising & Journalism',
-										'Education' => '+Education',
+										'Education' => 'Education',
 										'Social Sciences' => 'Social Sciences',
 										'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
-										'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
-										<span class="warlock-error">{{$errors->login->first('key_skill')}}</span>
+										'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control','id' => 'key_skill')); }}
+										<span class="warlock-error" id="key_skillerror">{{$errors->login->first('key_skill')}}</span>
 										<br>
-										{{ Form::textarea('funfact','', array('class' => 'form-control','placeholder' => 'Add your favorite quote', 'rows' => 5, 'cols' => 40))}}
+										{{ Form::textarea('funfact','', array('class' => 'form-control','placeholder' => 'Add your favorite quote', 'rows' => 5, 'cols' => 40,'id' => 'funfact'))}}
 										<br>
-										<span class="warlock-error">{{$errors->login->first('funfact')}}</span>
+										<span class="warlock-error" id="funfacterror">{{$errors->login->first('funfact')}}</span>
 									</div>
 
 								</div>
@@ -1151,7 +1154,7 @@
 											'Chemistry' => 'Chemistry',
 											'Physics' => 'Physics',
 											'Advertising & Journalism' => 'Advertising & Journalism',
-											'Education' => '+Education',
+											'Education' => 'Education',
 											'Social Sciences' => 'Social Sciences',
 											'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
 											'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
@@ -1174,7 +1177,7 @@
 												'Chemistry' => 'Chemistry',
 												'Physics' => 'Physics',
 												'Advertising & Journalism' => 'Advertising & Journalism',
-												'Education' => '+Education',
+												'Education' => 'Education',
 												'Social Sciences' => 'Social Sciences',
 												'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
 												'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
@@ -1198,13 +1201,13 @@
 													'Chemistry' => 'Chemistry',
 													'Physics' => 'Physics',
 													'Advertising & Journalism' => 'Advertising & Journalism',
-													'Education' => '+Education',
+													'Education' => 'Education',
 													'Social Sciences' => 'Social Sciences',
 													'Psychology & Behavioral Sciences' => 'Psychology & Behavioral Sciences',
 													'Political Science and Government' => 'Political Science and Government'), null,array('class' => 'form-control')); }}
 												</div>
 											</div>
-											{{ Form::submit('SUBMIT', array('class' => 'btn btn-default login-btn next2 last-btn','data-val'=> '1'))}}
+											{{ Form::button('SUBMIT', array('class' => 'btn btn-default login-btn next3 last-btn','data-val'=> '1'))}}
 										</fieldset>
 										{{ Form::close() }}
 

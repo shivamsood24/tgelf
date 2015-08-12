@@ -63,6 +63,42 @@
 			$key_interest2 = Input::get('key_interest2');
 			$key_interest3 = Input::get('key_interest3');
 
+			$key_interest1 = Input::get('key_interest1');
+			$key_interest2 = Input::get('key_interest2');
+			$key_interest3 = Input::get('key_interest3');
+			if (!Input::has('linkedin'))
+			{
+			    //
+			    $linkedin="#";
+			}
+
+			if (!Input::has('youtube'))
+			{
+			    //
+			    $youtube="#";
+			}
+			if (!Input::has('github'))
+			{
+			    //
+			    $github="#";
+			}
+			if (!Input::has('twitter'))
+			{
+			    //
+			    $twitter="#";
+			}
+			if (!Input::has('behance'))
+			{
+			    //
+			    $behance="#";
+			}
+			if (!Input::has('academia'))
+			{
+			    //
+			    $academia="#";
+			}
+
+
 
 			$rules = [
 			'username' => 'required',
@@ -90,12 +126,12 @@
 			'bio' => 'required|max:500',
 			'key_skill' => 'required',
 			'funfact' => 'required|max:200',
-			'twitter' => 'required|url',
-			'linkedin' => 'required|url',
-			'youtube' => 'required|url',
-			'github' => 'required|url',
-			'behance' => 'required|url',
-			'academia' => 'required|url'
+			'twitter' => 'url',
+			'linkedin' => 'url',
+			'youtube' => 'url',
+			'github' => 'url',
+			'behance' => 'url',
+			'academia' => 'url'
 			
 			];
 
@@ -196,49 +232,11 @@
 		public function fetchmap()
 		{
 			$result = DB::table('user_addresses')->get('country');
-			$fetch;
 			foreach ($result as $res)
 			{
-
-				if ($res == 'china') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'usa') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'russia') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'england') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'germany') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'france') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'spain') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'japan') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'south korea') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'canada') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'australia') {
-					$fetch = array_add($fetch, '156', $res);
-				}
-				if ($res == 'india') {
-					$fetch = array_add($fetch, '356', $res);
-				}
-
+				var_dump($user->name);
 			}
-			return Response::json($fetch);
+			return Response::json(array('name' => 'Steve', 'state' => 'CA'));
 		}
 
 	}

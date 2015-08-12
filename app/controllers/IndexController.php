@@ -35,7 +35,7 @@ public function events()
 					'title' => $title,
 					'username' => $user
 					);
-		return View::make('pages.index',$data);
+		return View::make('pages.events',$data);
 		}
 		else{
 		return View::make('pages.events',array('title'=> $title));
@@ -52,7 +52,7 @@ public function events()
 					'title' => $title,
 					'username' => $user
 					);
-		return View::make('pages.index',$data);
+		return View::make('pages.aboutus',$data);
 		}
 		else{
 		return View::make('pages.aboutus',array('title'=> $title));
@@ -69,7 +69,7 @@ public function events()
 					'title' => $title,
 					'username' => $user
 					);
-		return View::make('pages.index',$data);
+		return View::make('pages.program',$data);
 		}
 		else{
 		return View::make('pages.program',array('title'=> $title));

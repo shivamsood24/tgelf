@@ -18,7 +18,7 @@ $('.next1').click(function(){
 
 $('.next2').click(function(){
 	var count = 0;
-	var inputcheck = ['firstname','lastname','personalemail','professionalemail','countrycode','contactno','caddressline1','caddressline2','ccity','image','cstate','ccode','ccountry','lastname'];
+	var inputcheck = ['firstname','lastname','personalemail','professionalemail','countrycode','contactno','caddressline1','caddressline2','ccity','cstate','ccode','ccountry','lastname'];
 	var i=0;
 	while(inputcheck[i])
 	{
@@ -35,7 +35,7 @@ $('.next2').click(function(){
 
 	if(count > 0)
 	{
-		$('.next2').attr('disabled', true);
+		
 
 	}
 	else{
@@ -45,6 +45,34 @@ $('.next2').click(function(){
 	$('.f3').show("fade");
 	}
 	
+
+});
+
+$('.next3').click(function(){
+	var count = 0;
+	var inputcheck = ['image','company','position','bio','key_skill','funfact'];
+	var i=0;
+	while(inputcheck[i])
+	{
+		if($("#"+inputcheck[i]).val() == ""){
+
+			console.log(inputcheck[i]);
+			count++;
+			$("#"+inputcheck[i]+"error").css("color","#a83334");
+			$("#"+inputcheck[i]+"error").html("This Field cant be empty!!");
+		}
+		i++;
+	}
+	console.log(count);
+
+	if(count > 0)
+	{
+		
+
+	}
+	else{
+		$("#registerform").submit();
+	}
 
 });
 

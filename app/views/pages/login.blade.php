@@ -8,12 +8,11 @@
 {{ Form::open(array('url' => 'login','method' => 'post','autocomplete' => 'off')) }}
  	<div style="text-align: center;color:#a83334">{{Session::get('message')}}</div>
 	{{Form::text('username', '', array('class' => 'form-control','placeholder' => 'USER NAME'))}}
-	<br>
 	<span class="warlock-error">{{$errors->login->first('username')}}</span>
-	
-	{{ Form::password('password', array('class' => 'form-control','placeholder' => 'PASSWORD'))}}
 	<br>
+	{{ Form::password('password', array('class' => 'form-control','placeholder' => 'PASSWORD'))}}
 	<span class="warlock-error">{{$errors->login->first('password')}}</span>
+	<br>
 	{{ Form::submit('SUBMIT', array('class' => 'btn btn-default login-btn'))}}
 	{{ Form::close() }}
 </div>
