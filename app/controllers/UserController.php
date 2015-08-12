@@ -146,11 +146,10 @@
 				$result = User::where('username',$username)->first();
 			//return $result;
 				if ($result){
-					return "true";
+					return Response::json(array('value' => 'true'));
 				}
-				
 				else {
-					return "false";
+					return Response::json(array('value' => 'false'));
 				}
 			}
 

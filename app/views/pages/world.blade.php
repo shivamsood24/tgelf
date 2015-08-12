@@ -66,7 +66,14 @@ d3.json("{{asset('assets/world-50m.json')}}", function ready(error, world) {
 
     svg.selectAll('path')
         .data(topojson.feature(world, world.objects.countries).features)
-      .enter().append('path').attr("id",function(d) { return d.id; }).attr("style",function(d) { if(d.id == 356) return "fill:#a83334"; });
+      .enter().append('path').attr("id",function(d) { return d.id; }).attr("style",function(d) { 
+        @foreach ($fetch as $key => $value)
+            {{$key}}
+            {{$value}}
+        @endforeach
+
+        if(d.id == 356) 
+            return "fill:#a83334"; });
 
     redraw();       // update path data
 });

@@ -33,7 +33,7 @@ class LoginController extends BaseController {
 			];
 		
 		$rules = [
-			'username' => 'required|alpha',
+			'username' => 'required',
 			'password' => 'required|alpha_num|between:5,20',
 		];
 

@@ -24,17 +24,28 @@ $('#usercheck').focusout(function(){
 		"/checkusername",
 		{username : $(this).val()},
 		function(data){
-			//console.log(data);
-			if (data == "true") {
+			console.log(data['value']);
+			var val = data['value'];
+			
+			
+			if(val == "true") {
+				console.log("done");
 				$('.next1').attr('disabled', true);
 				$("#usernameerror").css("color","#a83334");
 				$("#usernameerror").html("Username already taken!!");
 			}
-			else{
+			if(val == "false"){
+				console.log("false");
 				$('.next1').attr('disabled', false);
 				$("#usernameerror").css("color","green");
 				$("#usernameerror").html("Username Available");
 			}
+			// else
+			// {
+			// 	$('.next1').attr('disabled', true);
+			// 	$("#usernameerror").css("color","#a83334");
+			// 	$("#usernameerror").html("Unexpected error has ocurred!!");
+			// }
 		});
 }
 else
