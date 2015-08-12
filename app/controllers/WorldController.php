@@ -22,41 +22,41 @@ class WorldController extends \BaseController {
 			foreach ($result as $res)
 			{
 		
-		if ($res == 'china') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'china') {
+			$fetch = array_add($fetch, '156', $res->country);
 		}
-		if ($res == 'usa') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'usa') {
+			$fetch = array_add($fetch, '840', $res->country);
 		}
-		if ($res == 'russia') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'russia') {
+			$fetch = array_add($fetch, '643', $res->country);
 		}
-		if ($res == 'england') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'england') {
+			$fetch = array_add($fetch, '826', $res->country);
 		}
-		if ($res == 'germany') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'germany') {
+			$fetch = array_add($fetch, '276', $res->country);
 		}
-		if ($res == 'france') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'france') {
+			$fetch = array_add($fetch, '250', $res->country);
 		}
-		if ($res == 'spain') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'spain') {
+			$fetch = array_add($fetch, '156', $res->country);
 		}
-		if ($res == 'japan') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'japan') {
+			$fetch = array_add($fetch, '156', $res->country);
 		}
-		if ($res == 'south korea') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'south korea') {
+			$fetch = array_add($fetch, '156', $res->country);
 		}
-		if ($res == 'canada') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country == 'canada') {
+			$fetch = array_add($fetch, '156', $res->country);
 		}
-		if ($res == 'australia') {
-			$fetch = array_add($fetch, '156', $res);
+		if ($res->country =='australia') {
+			$fetch = array_add($fetch, '156', $res->country);
 		}
-		if ($res == 'india') {
-			$fetch = array_add($fetch, '356', $res);
+		if ($res->country == 'india') {
+			$fetch = array_add($fetch, '356', $res->country);
 		}
 
 			}

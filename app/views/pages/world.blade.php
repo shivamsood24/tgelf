@@ -130,7 +130,7 @@ var countries = {
   	}
 </script>
 <div id="map">
-	
+	{{var_dump($fetch)}}
 </div>
 <script>
 	$("#356").hover(function(){
