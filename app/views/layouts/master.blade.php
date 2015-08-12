@@ -50,12 +50,13 @@
                 <a href="#" title="Close" class="close-nav">Close</a>
                 <div class="list-wrapper">
                     <ul>
-                        <li>{{ HTML::link('/index', 'Home')}}</li>
+                        <li>{{ HTML::link('/', 'Home')}}</li>
                         <li>{{ HTML::link('/aboutus', 'About Us')}}</li>
                         <li>{{ HTML::link('/events', 'Events')}}</li>
                         <li>{{ HTML::link('/program', 'Program')}}</li>
                         <li>{{ HTML::link('/showleaders', 'Leaders')}}</li>
                       @if(Session::has('username'))
+                      <li><a href="{{ URL::to('profile') }}/{{Session::get('username')}}">Profile</a></li>
                         <li><a href="{{ URL::to('logout') }}">Logout</a></li>
                         @else 
                            <li>{{ HTML::link('/login', 'Login')}}</li>
