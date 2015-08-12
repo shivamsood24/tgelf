@@ -10,13 +10,35 @@ class WorldController extends \BaseController {
 	public function index()
 	{
 		$title = "TGelf - leaders  Page";
+		if(Session::has('username')){
+			$username = Session::get('username');
+		$user = User::where('username',$username)->first();
+				$data = array(
+					'title' => $title,
+					'username' => $user
+					);
+		return View::make('pages.showleaders',$data);
+		}
+		else{
 		return View::make('pages.showleaders',array('title'=> $title));
+	}
 	}
 
 
 	public function world()
 	{
 		$title = 'TGelf - World  Map';
+		if(Session::has('username')){
+			$username = Session::get('username');
+		$user = User::where('username',$username)->first();
+				$data = array(
+					'title' => $title,
+					'username' => $user
+					);
+		return View::make('pages.world',$data);
+		}
+		else
+		{
 		$result = DB::table('user_addresses')->get();
 			$fetch =array();
 			foreach ($result as $res)
@@ -62,5 +84,7 @@ class WorldController extends \BaseController {
 			}
 		return View::make('pages.world',compact('title','fetch'));
 	}
+	}
+
 
 }

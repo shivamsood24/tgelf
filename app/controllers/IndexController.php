@@ -11,27 +11,69 @@ class IndexController extends BaseController {
 	{
 		//
 		$title = "TGelf - Homepage";
-		return View::make('pages.index',array('title'=> $title));
-
+		if(Session::has('username')){
+			$username = Session::get('username');
+		$user = User::where('username',$username)->first();
+				$data = array(
+					'title' => $title,
+					'username' => $user
+					);
+		return View::make('pages.index',$data);
+		}
+		
+			return View::make('pages.index',array('title'=> $title));
 	}
 
 public function events()
 	{
 			//
 		$title = "TGelf - Events";
+		if(Session::has('username')){
+			$username = Session::get('username');
+		$user = User::where('username',$username)->first();
+				$data = array(
+					'title' => $title,
+					'username' => $user
+					);
+		return View::make('pages.index',$data);
+		}
+		else{
 		return View::make('pages.events',array('title'=> $title));
+	}
 	}
 	public function aboutus()
 	{
 			//
 		$title = "TGelf - About Us";
+		if(Session::has('username')){
+			$username = Session::get('username');
+		$user = User::where('username',$username)->first();
+				$data = array(
+					'title' => $title,
+					'username' => $user
+					);
+		return View::make('pages.index',$data);
+		}
+		else{
 		return View::make('pages.aboutus',array('title'=> $title));
+	}
 	}
 	public function program()
 	{
 			//
 		$title = "TGelf - Program";
+		if(Session::has('username')){
+			$username = Session::get('username');
+		$user = User::where('username',$username)->first();
+				$data = array(
+					'title' => $title,
+					'username' => $user
+					);
+		return View::make('pages.index',$data);
+		}
+		else{
 		return View::make('pages.program',array('title'=> $title));
+	}
 	}
 
 public function doLogout()
@@ -40,75 +82,5 @@ public function doLogout()
     Session::flush();
     return Redirect::to('login'); // redirect the user to the login screen
 }
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
 
 }

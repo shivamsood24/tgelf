@@ -9,6 +9,11 @@
 
 		public function index()
 		{
+			if(Session::has('username'))
+		{
+			$value = Session::get('username');
+			return Redirect::to('profile/'.$value);
+		}
 			$title = "TGelf - Register Page";
 			
 			return View::make('pages.register',array('title'=> $title));
@@ -130,13 +135,27 @@
 
 			public function profile($username)
 			{
-				$title = "TGelf - User Profile Page";
-				$user = User::where('username',$username)->first();
-				$data = array(
-					'title' => $title,
-					'username' => $user
-					);
-				return View::make('pages.userprofile',$data);
+				if (Session::has('username')) {
+					$temp = Session::get('username');
+					if ($temp == $username) {
+						$user = User::where('username',$username)->first();
+						$title = "TGelf - User Profile Page";
+						$data = array(
+							'title' => $title,
+							'username' => $user
+							);
+						return View::make('pages.userprofile',$data);
+					}
+					else
+					{
+						return Redirect::to('/login');
+					}
+				}
+				else{
+					return Redirect::to('/login');
+				}
+				
+				
 			}
 
 
@@ -180,43 +199,43 @@
 			$fetch;
 			foreach ($result as $res)
 			{
-		
-		if ($res == 'china') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'usa') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'russia') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'england') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'germany') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'france') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'spain') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'japan') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'south korea') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'canada') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'australia') {
-			$fetch = array_add($fetch, '156', $res);
-		}
-		if ($res == 'india') {
-			$fetch = array_add($fetch, '356', $res);
-		}
+
+				if ($res == 'china') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'usa') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'russia') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'england') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'germany') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'france') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'spain') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'japan') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'south korea') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'canada') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'australia') {
+					$fetch = array_add($fetch, '156', $res);
+				}
+				if ($res == 'india') {
+					$fetch = array_add($fetch, '356', $res);
+				}
 
 			}
 			return Response::json($fetch);

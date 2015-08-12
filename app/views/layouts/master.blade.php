@@ -37,9 +37,12 @@
             </div>
             </div>
             <div class="col-md-4 col-xs-6"> 
+
             <a href="#"  id="nav-trigger" ><img src="{{asset('uploads/menuicon.png')}}" style="width: 8%;float: right;margin-right: 5%;"></a>
             <a href="/world" ><img src="{{asset('uploads/map.png')}}" style="width:8%;float:right;"></a>
-           
+            @if(Session::has('username'))
+            <a href="{{ URL::to('profile') }}/{{Session::get('username')}}" ><img src="{{asset($username->userprofiles->photo)}}" style="width: 6%;margin-top: 3%;float: right;border-radius: 20px;margin-right: 12px;"></a>
+            @endif
             
             </div>
             </div>
@@ -84,9 +87,9 @@
                             
             </div>
             <div class="content-wrapper col-md-5" style="margin-top:1%">
-                <a href="#" class="footer-right" title="Home"><img src="{{asset('uploads/phone.png')}}" style="width: 5%;">+91 124 4974 400</a>
-                <a href="#" class="footer-right" title="Home"><img src="{{asset('uploads/location.png')}}" style="width: 5%;">New Delhi, India</a>
-                <a href="#" class="footer-right" title="Home"><img src="{{asset('uploads/mail.png')}}" style="width: 5%;">contactus@tgelf.org</a>
+                <a href="#" class="footer-right" title="Phone"><img src="{{asset('uploads/phone.png')}}" style="width: 5%;">+91 124 4974 400</a>
+                <a href="#" class="footer-right" title="Address"><img src="{{asset('uploads/location.png')}}" style="width: 5%;">New Delhi, India</a>
+                <a href="#" class="footer-right" title="Email"><img src="{{asset('uploads/mail.png')}}" style="width: 5%;">contactus@tgelf.org</a>
                 
                             
             </div>

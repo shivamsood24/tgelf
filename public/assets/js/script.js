@@ -1,20 +1,64 @@
 $('.next1').click(function(){
-			$('.l1').removeClass('active');
+
+	var status = checkstatus();
+	if(status){
+		$('.l1').removeClass('active');
 			$('.l2').addClass('active');
 			$('.f1').hide("fade");
 			$('.f2').show("fade");
+	}
+			else
+			{
+				$('.next1').attr('disabled', true);
+				$("#usernameerror").css("color","#a83334");
+				$("#usernameerror").html("Please Enter Valid Username/Verification Code!!");
+			}
 });
 
 
 $('.next2').click(function(){
-	$('.l2').removeClass('active');
+	var count = 0;
+	var inputcheck = ['firstname','lastname','personalemail','professionalemail','countrycode','contactno','caddressline1','caddressline2','ccity','image','cstate','ccode','ccountry','lastname'];
+	var i=0;
+	while(inputcheck[i])
+	{
+		if($("#"+inputcheck[i]).val() == ""){
+
+			console.log(inputcheck[i]);
+			count++;
+			$("#"+inputcheck[i]+"error").css("color","#a83334");
+			$("#"+inputcheck[i]+"error").html("This Field cant be empty!!");
+		}
+		i++;
+	}
+	console.log(count);
+
+	if(count > 0)
+	{
+		$('.next2').attr('disabled', true);
+
+	}
+	else{
+		$('.l2').removeClass('active');
 	$('.l3').addClass('active');
 	$('.f2').hide("fade");
 	$('.f3').show("fade");
+	}
+	
 
 });
 
 
+function checkstatus(){
+	if($('#usercheck').attr("data-valid") || $('#codecheck').attr("data-valid"))
+	{
+		return true
+	}
+	else
+	{
+		return false;
+	}
+}
 $('#usercheck').focusout(function(){
 	//console.log("shots fired");
 	//console.log($(this).val());
@@ -33,12 +77,14 @@ $('#usercheck').focusout(function(){
 				$('.next1').attr('disabled', true);
 				$("#usernameerror").css("color","#a83334");
 				$("#usernameerror").html("Username already taken!!");
+				$('#usercheck').attr("data-valid" ,"0");
 			}
 			if(val == "false"){
 				console.log("false");
 				$('.next1').attr('disabled', false);
 				$("#usernameerror").css("color","green");
 				$("#usernameerror").html("Username Available");
+				$('#usercheck').attr("data-valid" ,"1");
 			}
 			// else
 			// {
@@ -70,17 +116,20 @@ $('#codecheck').keyup(function(){
 				$('.next1').attr('disabled', true);
 				$("#codeerror").css("color","#a83334");
 				$("#codeerror").html("Code is already used!!");
+				$('#codecheck').attr("data-valid" ,"0");
 			}
 			else if(data == 2){
 				$('.next1').attr('disabled', true);
 				$("#codeerror").css("color","#a83334");
 				$("#codeerror").html("Code is invalid!!");
+				$('#codecheck').attr("data-valid" ,"0");
 			}
 			else
 			{
 				$('.next1').attr('disabled', false);
 				$("#codeerror").css("color","green");
 				$("#codeerror").html("Code is Valid");
+				$('#codecheck').attr("data-valid" ,"1");
 			}
 		});
 }
